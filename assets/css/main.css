@@ -149,7 +149,7 @@ input::placeholder, select::placeholder, textarea::placeholder {
 		-ms-transition: border-bottom-color 0.2s ease, color 0.2s ease;
 		transition: border-bottom-color 0.2s ease, color 0.2s ease;
 		text-decoration: none;
-		color: #585858;
+		color: #a6aaac;
 		border-bottom: dotted 1px rgba(88, 88, 88, 0.5);
 	}
 
