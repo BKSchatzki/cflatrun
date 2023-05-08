@@ -2749,7 +2749,7 @@ input::placeholder, select::placeholder, textarea::placeholder {
 
 				body:not(.is-touch) .tiles article:hover > .image:before {
 					background-color: #333333;
-					opacity: 0.35;
+					opacity: 0.6667;
 				}
 
 				body:not(.is-touch) .tiles article:hover > .image:after {
