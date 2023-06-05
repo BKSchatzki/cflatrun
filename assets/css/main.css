@@ -1900,7 +1900,7 @@ input::placeholder, select::placeholder, textarea::placeholder {
 		}
 
 			ul.alt li {
-				border-top: solid 1px #c9c9c9;
+				/* border-top: solid 1px #c9c9c9; */
 				padding: 0.5em 0;
 			}
 
