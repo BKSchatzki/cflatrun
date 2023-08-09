@@ -1,6 +1,6 @@
 # C Flat Run
 
-A landing page for a university a cappella group. Plans for full redesign, refactor, and implementation of dashboard allowing group admins to modify site content.
+A landing page for a university a cappella group. Plans for a full redesign, refactor, and implementation of a dashboard allowing group admins to modify site content.
 
 **Link to project:** http://cflatrun.com
 
@@ -10,11 +10,11 @@ A landing page for a university a cappella group. Plans for full redesign, refac
 
 **Tech used:** HTML, CSS, JavaScript
 
-Straight up raw base technologies with CSS preprocessors. This uses a lightly-edited template and is a true website in the traditional sense. The template is a bit of a monster though, so time spent making this was divided fairly evenly between editing the markup and searching through large CSS files.
+Straight-up raw base technologies with CSS preprocessors. This uses a lightly-edited template and is a true website in the traditional sense. The template is a bit of a monster though, so the time spent making this was divided fairly evenly between editing the markup and searching through large CSS files.
 
 ## Optimizations
 
-Honestly, there isn't a lot I would change before the full redesign and refactor. I already removed a lot of boilerplate files and unused CSS rules, but there's definitely a lot of stuff in there that remains. I had to play with the tables a lot to make them behave, and change some list styling from the original template.
+Honestly, there isn't a lot I would change before the full redesign and refactor. I already removed a lot of boilerplate files and unused CSS rules, but there's definitely a lot of stuff in there that remains. I had to play with the tables a lot to make them behave and change some list styling from the original template.
 
 ## Lessons Learned:
 
@@ -22,7 +22,7 @@ This was literally harder than building something from scratch. So the takeaway 
 
 ## Examples:
 
-Take a look at these couple examples that I have in my own portfolio:
+Take a look at some more examples in my portfolio:
 
 **Songstruct:** https://github.com/BKSchatzki/songstruct
 
