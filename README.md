@@ -1,33 +1,31 @@
-# My Awesome Project
+# C Flat Run
 
-Write a short sentence or two about this project and what it does. Be sure to include a link and a screenshot (we're front end devs so we can actually see our work!).
+A landing page for a university a cappella group. Plans for a full redesign, refactor, and implementation of a dashboard allowing group admins to modify site content.
 
-**Link to project:** http://recruiters-love-seeing-live-demos.com/
+**Link to project:** http://cflatrun.com
 
-![alt tag](http://placecorgi.com/1200/650)
+![C Flat Run](https://res.cloudinary.com/djqsm7sz5/image/upload/v1691468692/bks-portfolio/cflatrun-landingpage_qol3oj.jpg)
 
 ## How It's Made:
 
-**Tech used:** HTML, CSS, JavaScript, Framework of choice
+**Tech used:** HTML, CSS, JavaScript
 
-Here's where you can go to town on how you actually built this thing. Write as much as you can here, it's totally fine if it's not too much just make sure you write _something_. If you don't have too much experience on your resume working on the front end that's totally fine. This is where you can really show off your passion and make up for that ten fold.
+Straight-up raw base technologies with CSS preprocessors. This uses a lightly-edited template and is a true website in the traditional sense. The template is a bit of a monster though, so the time spent making this was divided fairly evenly between editing the markup and searching through large CSS files.
 
 ## Optimizations
 
-_(optional)_
-
-You don't have to include this section but interviewers _love_ that you can not only deliver a final product that looks great but also functions efficiently. Did you write something then refactor it later and the result was 5x faster than the original implementation? Did you cache your assets? Things that you write in this section are **GREAT** to bring up in interviews and you can use this section as reference when studying for technical interviews!
+Honestly, there isn't a lot I would change before the full redesign and refactor. I already removed a lot of boilerplate files and unused CSS rules, but there's definitely a lot of stuff in there that remains. I had to play with the tables a lot to make them behave and change some list styling from the original template.
 
 ## Lessons Learned:
 
-No matter what your experience level, being an engineer means continuously learning. Every time you build something you always have those _whoa this is awesome_ or _fuck yeah I did it!_ moments. This is where you should share those moments! Recruiters and interviewers love to see that you're self-aware and passionate about growing.
+This was literally harder than building something from scratch. So the takeaway was mainly just practice for combing through existing code that is very different from how I'd write things. It was a good exercise in mentally building out what will go into the dashboard I'd like to make long term.
 
 ## Examples:
 
-Take a look at these couple examples that I have in my own portfolio:
+Take a look at some more examples in my portfolio:
 
-**Palettable:** https://github.com/alecortega/palettable
+**Songstruct:** https://github.com/BKSchatzki/songstruct
 
-**Twitter Battle:** https://github.com/alecortega/twitter-battle
+**BK Chat:** https://github.com/BKSchatzki/bk-chat
 
-**Patch Panel:** https://github.com/alecortega/patch-panel
+**Nick B. Schatzki:** https://github.com/BKSchatzki/nbs-portfolio
