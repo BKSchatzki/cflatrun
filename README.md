@@ -24,8 +24,10 @@ This was literally harder than building something from scratch. So the takeaway 
 
 Take a look at some more examples in my portfolio:
 
-**Songstruct:** https://github.com/BKSchatzki/songstruct
-
 **BK Chat:** https://github.com/BKSchatzki/bk-chat
 
 **Nick B. Schatzki:** https://github.com/BKSchatzki/nbs-portfolio
+
+**Songstruct:** https://github.com/BKSchatzki/songstruct
+
+**SongStrudel:** https://github.com/BKSchatzki/songstrudel
