@@ -1,8 +1,8 @@
 ---
-name: Steele Leonard
-classof: "2024"
-voicepart: Tenor
-position: President
+name: Zander Coleman
+classof: "2025"
+voicepart: Bass
+position: Music Director
 bio: ""
 image: ""
 iscurrent: true
