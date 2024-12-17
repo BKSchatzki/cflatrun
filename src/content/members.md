@@ -2,89 +2,152 @@
 title: Members
 members:
   - name: Steele Leonard
+    classof: 2024
+    voicepart: Tenor
     position: President
-    voicepart: Tenor
-    classof: 2024
+    bio:
+    image:
+    iscurrent: true
   - name: Zander Coleman
+    classof: 2025
+    voicepart: Bass
     position: Music Director
-    voicepart: Bass
-    classof: 2025
+    bio:
+    image:
+    iscurrent: true
   - name: Jenn Rihacek
+    classof: 2026
+    voicepart: Alto
     position: Assistant Music Director
-    voicepart: Alto
-    classof: 2026
+    bio:
+    image:
+    iscurrent: true
   - name: Akila Sanjay
+    classof: 2024
+    voicepart: Alto
     position: Event Producer
-    voicepart: Alto
-    classof: 2024
+    bio:
+    image:
+    iscurrent: true
   - name: Patrick Diamond
-    position: Co-Business Manager
-    voicepart: Tenor
     classof: 2026
+    voicepart: Tenor
+    position: Co-Business Manager
+    bio:
+    image:
+    iscurrent: true
   - name: Eva Manegio
+    classof: 2025
+    voicepart: Alto
     position: Co-Business Manager
-    voicepart: Alto
-    classof: 2025
+    bio:
+    image:
+    iscurrent: true
   - name: Jake Groff
+    classof: 2026
+    voicepart: Bass
     position: Social Media & Alumni Relations Chair
-    voicepart: Bass
-    classof: 2026
+    bio:
+    image:
+    iscurrent: true
   - name: Caitlin Dempsey
+    classof: 2026
+    voicepart: Alto
     position: Tech Director
-    voicepart: Alto
-    classof: 2026
+    bio:
+    image:
+    iscurrent: true
   - name: Ashley Lewis
-    position:
-    voicepart: Soprano
     classof: 2024
+    voicepart: Soprano
+    position:
+    bio:
+    image:
+    iscurrent: true
   - name: Teresa Colosi
-    position:
-    voicepart: Soprano
     classof: 2025
+    voicepart: Soprano
+    position:
+    bio:
+    image:
+    iscurrent: true
   - name: Maya Seltzer-Clinton
-    position:
-    voicepart: Soprano
     classof: 2027
+    voicepart: Soprano
+    position:
+    bio:
+    image:
+    iscurrent: true
   - name: Abby Diamond
-    position:
-    voicepart: Soprano
     classof: 2027
+    voicepart: Soprano
+    position:
+    bio:
+    image:
+    iscurrent: true
   - name: Jessica Rinaldi
-    position:
+    classof: 2027
     voicepart: Soprano
-    classof: 2027
+    position:
+    bio:
+    image:
+    iscurrent: true
   - name: Pallavi Dalmia
-    position:
+    classof: 2025
     voicepart: Alto
-    classof: 2025
+    position:
+    bio:
+    image:
+    iscurrent: true
   - name: Andrew Schmidt
-    position:
-    voicepart: Tenor
     classof: 2026
+    voicepart: Tenor
+    position:
+    bio:
+    image:
+    iscurrent: true
   - name: Audrey Silber
-    position:
-    voicepart: Tenor
     classof: 2025
+    voicepart: Tenor
+    position:
+    bio:
+    image:
+    iscurrent: true
   - name: Emi Prudhoe
-    position:
-    voicepart: Tenor
     classof: 2026
+    voicepart: Tenor
+    position:
+    bio:
+    image:
+    iscurrent: true
   - name: Krishna Katakota
-    position:
+    classof: 2026
     voicepart: Tenor
-    classof: 2026
+    position:
+    bio:
+    image:
+    iscurrent: true
   - name: Jaden Bradby
-    position:
-    voicepart: Bass
     classof: 2026
-  - name: Akshath Puli
-    position:
     voicepart: Bass
-    classof: 2027
-  - name: Erik Rodriguez
     position:
-    voicepart: Vocal Percussion
+    bio:
+    image:
+    iscurrent: true
+  - name: Akshath Puli
     classof: 2027
+    voicepart: Bass
+    position:
+    bio:
+    image:
+    iscurrent: true
+  - name: Erik Rodriguez
+    classof: 2027
+    voicepart: Vocal Percussion
+    position:
+    bio:
+    image:
+    iscurrent: true
 ---
 
 Get to know the members of C Flat Run!

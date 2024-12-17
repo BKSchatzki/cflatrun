@@ -6,10 +6,20 @@ public_folder: '/uploads'
 collections:
   - label: 'Members'
     name: 'members'
-    folder: 'members'
+    folder: 'src/content/members'
     create: true
     fields:
-      - { label: 'Name', name: 'name', widget: 'string' }
-      - { label: 'Position', name: 'position', widget: 'string', required: false }
-      - { label: 'Voice Part', name: 'voicepart', widget: 'string' }
-      - { label: 'Class Of', name: 'classof', widget: 'string' }
+      - { label: 'Name', name: 'name', widget: 'string', default: '' }
+      - { label: 'Class Of', name: 'classof', widget: 'string', default: '' }
+      - { label: 'Voice Part', name: 'voicepart', widget: 'string', default: '' }
+      - { label: 'Position', name: 'position', widget: 'string', default: '', required: false }
+      - { label: 'Bio', name: 'bio', widget: 'text', default: '', required: false }
+      - {
+          label: 'Image',
+          name: 'image',
+          widget: 'image',
+          default: '',
+          media_library: { config: { multiple: false } },
+          required: false,
+        }
+      - { label: 'Is Current', name: 'iscurrent', widget: 'boolean', default: true }
