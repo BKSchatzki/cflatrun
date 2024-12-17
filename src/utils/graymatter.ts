@@ -2,35 +2,26 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 
-// import { PostData } from './types'; // Import your type
+export function getDataFromDirectory<T>(directory: string): T[] {
+  const allData: T[] = [];
+  const filePaths = fs.readdirSync(directory);
 
-// example if using typescript: this is based on the post schema we created in the config.yml
-
-export interface MemberData {
-  name: string;
-  classof: string;
-  voicepart: string;
-  position?: string;
-  bio?: string;
-  image?: string;
-  iscurrent: boolean;
-}
-
-const membersDirectory = path.join(process.cwd(), 'src/content/members');
-
-export function getMembersData(): MemberData[] {
-  const fileNames = fs.readdirSync(membersDirectory);
-  const allMembersData = fileNames.map((fileName) => {
-    const fullPath = path.join(membersDirectory, fileName);
+  filePaths.forEach((filePath) => {
+    const fullPath = path.join(directory, filePath);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data } = matter(fileContents);
-
-    return {
+    allData.push({
       ...data,
-    } as MemberData;
+    } as T);
   });
 
-  return allMembersData;
+  return allData;
+}
+
+export function getDataFromFile<T>(filePath: string): T {
+  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const { data } = matter(fileContents);
+  return { ...data } as T;
 }
 
 // export function getAllPostIds() {

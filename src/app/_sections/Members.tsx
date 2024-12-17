@@ -1,14 +1,22 @@
 import React from 'react';
 
-import {
-  getMembersData,
-  MemberData,
-} from '@/utils/graymatter';
+import path from 'path';
 
+import { getDataFromDirectory } from '@/utils/graymatter';
+
+const membersDirectory = path.join(process.cwd(), 'src/content/members');
+
+interface MemberData {
+  name: string;
+  classof: string;
+  voicepart: string;
+  position?: string;
+  iscurrent: boolean;
+}
 type Member = MemberData;
 
-const Members = async () => {
-  const allMembersData = await getMembersData();
+const Members = () => {
+  const allMembersData = getDataFromDirectory<MemberData>(membersDirectory);
   const sortedCurrentMembers: Member[] = allMembersData
     .filter((member: Member) => member.iscurrent)
     .sort((a: Member, b: Member) => +a.classof - +b.classof);
@@ -27,7 +35,7 @@ const Members = async () => {
 
 const MembersList = ({ members }: { members: Member[] }) => {
   return (
-    <ul className="grid w-full grid-cols-1 place-items-center gap-3 lg:max-w-[1280px] lg:grid-cols-3">
+    <ul className="grid w-full max-w-[1280px] grid-cols-1 place-items-center gap-3 lg:grid-cols-3">
       {members.map((member: Member) => (
         <li
           key={member.name}

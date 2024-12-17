@@ -4,6 +4,16 @@ backend:
 media_folder: 'public/uploads'
 public_folder: '/uploads'
 collections:
+  - label: 'Site Content'
+    name: 'sitecontent'
+    files:
+      - label: 'Hero'
+        name: 'hero'
+        file: 'src/content/sitecontent/hero.md'
+        fields:
+          - { label: 'Site Heading', name: 'siteheading', widget: 'string', default: '' }
+          - { label: 'Site Subheading', name: 'sitesubheading', widget: 'string', default: '' }
+          - { label: 'Site Description', name: 'sitedescription', widget: 'text', default: '' }
   - label: 'Members'
     name: 'members'
     folder: 'src/content/members'
