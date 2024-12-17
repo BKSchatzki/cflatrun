@@ -1,9 +1,6 @@
 ---
-name: Abby Diamond
+name: Jessica Rinaldi
 classof: "2027"
 voicepart: Soprano
-position: ""
-bio: ""
-image: ""
 iscurrent: true
 ---
