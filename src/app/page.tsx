@@ -1,5 +1,11 @@
-import homeContent from '@/content/home.md';
 import membersContent from '@/content/members.md';
+
+type Member = {
+  name: string;
+  position: string;
+  voicepart: string;
+  classof: string;
+};
 
 export default function Home() {
   const { title, members } = membersContent.attributes;
@@ -15,7 +21,7 @@ export default function Home() {
         <h2 className="text-3xl">{title}</h2>
         <MembersContent />
         <ul className="flex w-1/2 min-w-96 flex-col gap-4">
-          {members.map((member: any) => (
+          {members.map((member: Member) => (
             <li
               key={member.name}
               className="grid grid-cols-12 gap-4"

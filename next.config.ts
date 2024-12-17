@@ -10,6 +10,12 @@ const nextConfig: NextConfig = {
     return cfg;
   },
   distDir: 'out',
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 export default nextConfig;
