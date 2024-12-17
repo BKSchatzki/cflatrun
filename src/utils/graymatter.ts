@@ -16,7 +16,7 @@ export interface MemberData {
   iscurrent: boolean;
 }
 
-const membersDirectory = path.join(process.cwd(), 'content/members');
+const membersDirectory = path.join(process.cwd(), 'src/content/members');
 
 export function getMembersData(): MemberData[] {
   const fileNames = fs.readdirSync(membersDirectory);

@@ -7,16 +7,10 @@ import {
 
 type Member = MemberData;
 
-export const getStaticProps = async () => {
-  const allMembersData = getMembersData();
-  return {
-    props: {
-      members: allMembersData,
-    },
-  };
-};
+export default async function Home() {
+  const allMembersData = await getMembersData();
+  const members: Member[] = allMembersData;
 
-export default function Home({ members }: { members: Member[] }) {
   return (
     <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
       <header className="row-start-1 flex flex-wrap items-center justify-center gap-6">
@@ -37,10 +31,12 @@ export default function Home({ members }: { members: Member[] }) {
                   <p>{member.voicepart}</p>
                   <p>{member.position}</p>
                   <p>{member.bio}</p>
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                  />
+                  {member.image && (
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                    />
+                  )}
                 </li>
               )
           )}
