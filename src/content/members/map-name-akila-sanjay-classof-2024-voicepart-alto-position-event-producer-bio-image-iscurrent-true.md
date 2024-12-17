@@ -5,5 +5,5 @@ voicepart: Alto
 position: Event Producer
 bio: ""
 image: ""
-iscurrent: true
+iscurrent: false
 ---
