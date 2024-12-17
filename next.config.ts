@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
     });
     return cfg;
   },
+  distDir: 'out',
 };
 
 export default nextConfig;
