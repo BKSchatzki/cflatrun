@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import membersContent from '@/content/members.md';
 
 type Member = {
@@ -35,7 +37,12 @@ export default function Home() {
         </ul>
       </main>
       <footer className="row-start-3 flex flex-wrap items-center justify-center gap-6">
-        Footer
+        <Link
+          href="/admin/index.html"
+          className="bg-indigo-400 p-4 font-semibold text-background hover:underline"
+        >
+          Admin
+        </Link>
       </footer>
     </div>
   );
