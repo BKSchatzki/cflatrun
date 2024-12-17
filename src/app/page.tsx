@@ -3,6 +3,7 @@ import path from 'path';
 
 import { getDataFromFile } from '@/utils/graymatter';
 
+import Music from './_sections/Concerts';
 import Members from './_sections/Members';
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <main className="row-start-2 flex w-full max-w-[calc(1280px)] flex-col items-center gap-8">
         <Hero />
         <Members />
+        <Music />
         <Link
           href="/admin/index.html"
           className="self-start rounded-md bg-indigo-400 px-4 py-2 font-semibold text-background hover:underline"

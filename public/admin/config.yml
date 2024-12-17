@@ -35,9 +35,9 @@ collections:
       - { label: 'Voice Part', name: 'voicepart', widget: 'string' }
       - { label: 'Position', name: 'position', widget: 'string', required: false }
       - { label: 'Is Current', name: 'iscurrent', widget: 'boolean', default: true }
-  - label: 'Music'
-    name: 'music'
-    folder: 'src/content/music'
+  - label: 'Concerts'
+    name: 'concerts'
+    folder: 'src/content/concerts'
     create: true
     fields:
       - { label: 'Concert Name', name: 'concertname', widget: 'string' }
