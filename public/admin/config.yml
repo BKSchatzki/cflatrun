@@ -8,6 +8,17 @@ collections:
     name: 'members'
     folder: 'src/content/members'
     create: true
+    sortable_fields: ['name', 'classof', 'voicepart', 'position', 'iscurrent']
+    view_filters:
+      - label: 'Current Members'
+        field: 'iscurrent'
+        pattern: 'true'
+      - label: 'Past Members'
+        field: 'iscurrent'
+        pattern: 'false'
+      - label: 'Officers'
+        field: 'position'
+        pattern: '(.|\s)*\S(.|\s)*'
     fields:
       - { label: 'Name', name: 'name', widget: 'string', default: '' }
       - { label: 'Class Of', name: 'classof', widget: 'string', default: '' }
