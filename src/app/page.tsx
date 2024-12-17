@@ -18,25 +18,23 @@ export default async function Home() {
       </header>
       <main className="row-start-2 flex w-full flex-col items-center gap-8">
         <h2 className="text-3xl">Members</h2>
-        <ul className="flex w-1/2 min-w-96 flex-col gap-12">
+        <ul className="grid w-full min-w-96 max-w-[1024px] grid-cols-3 gap-12">
           {members.map(
             (member: Member) =>
-              member.iscurrent && (
+              member.iscurrent &&
+              member.position && (
                 <li
                   key={member.name}
-                  className="flex flex-col gap-4"
+                  className="flex flex-col gap-4 rounded-xl border p-8"
                 >
-                  <h3>{member.name}</h3>
-                  <p>{member.classof}</p>
-                  <p>{member.voicepart}</p>
-                  <p>{member.position}</p>
-                  <p>{member.bio}</p>
-                  {member.image && (
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                    />
-                  )}
+                  <div className="flex w-full justify-between">
+                    <h3>{member.name}</h3>
+                    <div className="flex gap-4">
+                      <p>{member.voicepart}</p>
+                      <p>{member.classof}</p>
+                    </div>
+                  </div>
+                  <p className="text-end">{member.position || '-'}</p>
                 </li>
               )
           )}
