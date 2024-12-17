@@ -11,9 +11,9 @@ collections:
         name: 'hero'
         file: 'src/content/sitecontent/hero.md'
         fields:
-          - { label: 'Site Heading', name: 'siteheading', widget: 'string', default: '' }
-          - { label: 'Site Subheading', name: 'sitesubheading', widget: 'string', default: '' }
-          - { label: 'Site Description', name: 'sitedescription', widget: 'text', default: '' }
+          - { label: 'Site Heading', name: 'siteheading', widget: 'string' }
+          - { label: 'Site Subheading', name: 'sitesubheading', widget: 'string' }
+          - { label: 'Site Description', name: 'sitedescription', widget: 'text' }
   - label: 'Members'
     name: 'members'
     folder: 'src/content/members'
@@ -30,8 +30,36 @@ collections:
         field: 'position'
         pattern: '(.|\s)*\S(.|\s)*'
     fields:
-      - { label: 'Name', name: 'name', widget: 'string', default: '' }
-      - { label: 'Class Of', name: 'classof', widget: 'string', default: '' }
-      - { label: 'Voice Part', name: 'voicepart', widget: 'string', default: '' }
-      - { label: 'Position', name: 'position', widget: 'string', default: '', required: false }
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Class Of', name: 'classof', widget: 'number' }
+      - { label: 'Voice Part', name: 'voicepart', widget: 'string' }
+      - { label: 'Position', name: 'position', widget: 'string', required: false }
       - { label: 'Is Current', name: 'iscurrent', widget: 'boolean', default: true }
+  - label: 'Music'
+    name: 'music'
+    folder: 'src/content/music'
+    create: true
+    fields:
+      - { label: 'Concert Name', name: 'concertname', widget: 'string' }
+      - { label: 'Year', name: 'year', widget: 'number' }
+      - {
+          label: 'Semester',
+          name: 'semester',
+          widget: 'select',
+          options: ['Spring', 'Fall'],
+          default: '',
+        }
+      - label: 'Songs'
+        name: 'songs'
+        widget: 'list'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'OPB', name: 'opb', widget: 'string' }
+          - { label: 'Arranger', name: 'arranger', widget: 'string' }
+          - { label: 'Soloist', name: 'soloist', widget: 'string', required: false }
+          - {
+              label: 'Vocal Percussion',
+              name: 'vocalpercussion',
+              widget: 'string',
+              required: false,
+            }
