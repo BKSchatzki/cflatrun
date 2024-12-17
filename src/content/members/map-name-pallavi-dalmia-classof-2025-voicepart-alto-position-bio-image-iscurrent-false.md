@@ -5,5 +5,5 @@ voicepart: Alto
 position: ""
 bio: ""
 image: ""
-iscurrent: false
+iscurrent: true
 ---
