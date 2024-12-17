@@ -4,20 +4,12 @@ backend:
 media_folder: public/img
 public_folder: img
 collections:
-  - name: 'pages'
-    label: 'Pages'
-    files:
-      - label: 'Members'
-        name: 'members'
-        file: 'content/members.md'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - label: 'Members'
-            name: 'members'
-            widget: list
-            fields:
-              - { label: 'Name', name: 'name', widget: 'string' }
-              - { label: 'Position', name: 'position', widget: 'text', required: false }
-              - { label: 'Voice Part', name: 'voicepart', widget: 'text' }
-              - { label: 'Class Of', name: 'classof', widget: 'text' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+  - label: 'Members'
+    name: 'members'
+    folder: 'members'
+    create: true
+    fields:
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Position', name: 'position', widget: 'string', required: false }
+      - { label: 'Voice Part', name: 'voicepart', widget: 'string' }
+      - { label: 'Class Of', name: 'classof', widget: 'string' }
