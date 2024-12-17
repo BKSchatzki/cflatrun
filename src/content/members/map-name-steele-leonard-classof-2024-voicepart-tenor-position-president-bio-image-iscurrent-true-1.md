@@ -5,5 +5,5 @@ voicepart: Tenor
 position: President
 bio: ""
 image: ""
-iscurrent: true
+iscurrent: false
 ---
