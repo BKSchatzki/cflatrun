@@ -30,7 +30,10 @@ const Concerts = () => {
     .sort((a: Concert, b: Concert) => a.year - b.year);
 
   return (
-    <section className="w-full rounded-md bg-gradient-to-b from-slate-950 to-yellow-950">
+    <section
+      id="concerts"
+      className="w-full scroll-m-16 rounded-md bg-gradient-to-b from-slate-950 to-yellow-950"
+    >
       <h2>Recent Concerts</h2>
       <ConcertsList concerts={sortedConcerts} />
     </section>
@@ -39,7 +42,7 @@ const Concerts = () => {
 
 const ConcertsList = ({ concerts }: { concerts: Concert[] }) => {
   return (
-    <ul className="relative z-10 grid w-full max-w-[1280px] grid-cols-1 place-items-center gap-3 border-t-2 border-amber-300 p-3 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="relative z-10 grid w-full max-w-[1280px] grid-cols-1 place-items-center gap-3 border-t-2 border-cflatyellow p-3 sm:grid-cols-2 lg:grid-cols-3">
       <img
         src="/uploads/suspenders-concert.png"
         alt=""

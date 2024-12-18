@@ -4,6 +4,11 @@ import * as React from 'react';
 import { useState } from 'react';
 
 import {
+  Disc3,
+  SendHorizonal,
+  ThumbsUp,
+} from 'lucide-react';
+import {
   Controller,
   FormProvider,
   useForm,
@@ -13,10 +18,10 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 const formSchema = z.object({
-  name: z.string().min(1, { message: 'We need to know who you are!' }),
-  email: z.string().email('We need to be able to message you back!'),
+  name: z.string().min(1, { message: 'Please enter your name.' }),
+  email: z.string().email('Please enter a valid email.'),
   message: z.string().min(70, {
-    message: 'Oops! Did you mean to send such a short message?',
+    message: 'Please expand on your message.',
   }),
 });
 
@@ -67,14 +72,20 @@ const Contact = () => {
         name="contact"
         onSubmit={form.handleSubmit(handleFormSubmission)}
         data-netlify="true"
+        className="border-zinc relative z-10 col-start-1 flex w-full flex-col gap-9 rounded-md rounded-t-none border-t-2 bg-gradient-to-b from-zinc-950 to-emerald-950 px-6 py-3 pt-9"
       >
         <input
           type="hidden"
           name="form-name"
           value="contact"
         />
-        <div>
-          <label htmlFor="name">Name</label>
+        <div className="relative">
+          <label
+            htmlFor="name"
+            className="sr-only"
+          >
+            Name
+          </label>
           <Controller
             name="name"
             control={form.control}
@@ -82,55 +93,110 @@ const Contact = () => {
               <input
                 type="text"
                 id="name"
+                placeholder="Name"
                 {...field}
+                className="w-full border-b border-zinc-400 bg-zinc-950/50 px-4 py-1.5 text-zinc-50 placeholder:text-zinc-400 focus:border-zinc-50 focus:outline-none"
               />
             )}
           />
           {form.formState.errors.name && (
-            <p className="text-red-500">{form.formState.errors.name.message}</p>
+            <p className="absolute -bottom-6 left-3 text-red-500">
+              {form.formState.errors.name.message}
+            </p>
           )}
         </div>
-        <div>
-          <label htmlFor="email">Email</label>
+        <div className="relative">
+          <label
+            htmlFor="email"
+            className="sr-only"
+          >
+            Email
+          </label>
           <Controller
             name="email"
             control={form.control}
             render={({ field }) => (
               <input
-                type="email"
+                type="text"
                 id="email"
+                placeholder="Email"
                 {...field}
+                className="w-full border-b border-zinc-400 bg-zinc-950/50 px-3 py-1.5 text-zinc-50 placeholder:text-zinc-400 focus:border-zinc-50 focus:outline-none"
               />
             )}
           />
           {form.formState.errors.email && (
-            <p className="text-red-500">{form.formState.errors.email.message}</p>
+            <p className="absolute -bottom-6 left-3 text-red-500">
+              {form.formState.errors.email.message}
+            </p>
           )}
         </div>
-        <div>
-          <label htmlFor="message">Message</label>
+        <div className="relative">
+          <label
+            htmlFor="message"
+            className="sr-only"
+          >
+            Message
+          </label>
           <Controller
             name="message"
             control={form.control}
             render={({ field }) => (
               <textarea
                 id="message"
+                placeholder="Message"
+                rows={5}
                 {...field}
+                className="scrollbar-thin scrollbar-thumb-zinc w-full resize-none text-wrap border-b border-zinc-400 bg-zinc-950/50 px-3 py-1.5 text-zinc-50 placeholder:text-zinc-400 focus:border-zinc-50 focus:outline-none"
               />
             )}
           />
           {form.formState.errors.message && (
-            <p className="text-red-500">{form.formState.errors.message.message}</p>
+            <p className="absolute -bottom-5 left-3 text-red-500">
+              {form.formState.errors.message.message}
+            </p>
           )}
         </div>
-        <button
-          type="submit"
-          disabled={isSubmitting}
-        >
-          {isSubmitting ? 'Submitting...' : 'Submit'}
-        </button>
-        {submitIsSuccessful && <p>Your message has been sent!</p>}
-        {submitIsFailed && <p>There was an error sending your message.</p>}
+        <div className="relative pb-9">
+          <button
+            type="submit"
+            disabled={isSubmitting || submitIsSuccessful}
+            className="h-8 w-full rounded-md bg-zinc-50 text-lg font-semibold text-zinc-950 transition-all duration-100 active:scale-95 disabled:opacity-50"
+          >
+            {isSubmitting ? (
+              <span className="flex items-center justify-center gap-1.5">
+                <span>Submitting</span>
+                <Disc3 className="animate-spin" />
+              </span>
+            ) : submitIsSuccessful ? (
+              <span className="flex items-center justify-center gap-1.5">
+                <span>Submitted</span>
+                <ThumbsUp />
+              </span>
+            ) : (
+              <span className="flex items-center justify-center gap-1.5">
+                <span>Submit</span>
+                <SendHorizonal />
+              </span>
+            )}
+          </button>
+          {submitIsSuccessful && (
+            <p className="absolute bottom-3 left-1/2 w-full -translate-x-1/2 text-foreground">
+              Thanks! We'll get back to you soon.
+            </p>
+          )}
+          {submitIsFailed && (
+            <p className="absolute bottom-3 left-1/2 w-full -translate-x-1/2 text-foreground">
+              Something went wrong. Please try again.
+            </p>
+          )}
+        </div>
+        <img
+          src="/uploads/orchard.png"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute left-1/2 top-1/2 -z-10 size-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-10 blur-sm"
+        />
       </form>
     </FormProvider>
   );

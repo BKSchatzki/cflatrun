@@ -19,21 +19,21 @@ const Hero = () => {
   const heroData: HeroData = getDataFromFile<HeroData>(heroPath);
 
   return (
-    <section className="border-cflatyellow relative z-10 flex w-full max-w-[1280px] flex-col gap-6 self-start text-balance rounded-2xl border-b-2 bg-gradient-to-b from-slate-950 to-slate-800 p-6 pt-[3.75rem]">
+    <section className="relative z-10 flex w-full max-w-[1280px] flex-col gap-6 self-start text-balance rounded-2xl border-b-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-slate-800 p-6 pt-[3.75rem]">
       <div className="flex gap-3 max-sm:flex-col sm:items-center">
         <img
           src="/logo.png"
           alt="C Flat Run Logo"
-          className="hover:shadow-cflatyellow max-h-28 max-w-28 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-md"
+          className="max-h-28 max-w-28 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-md hover:shadow-cflatyellow"
         />
         <div className="space-y-3">
-          <h1 className="from-cflatyellow bg-gradient-to-r to-amber-300 bg-clip-text text-transparent">
+          <h1 className="bg-gradient-to-r from-cflatyellow to-amber-300 bg-clip-text text-transparent">
             {heroData.siteheading}
           </h1>
           <SocialLinks />
         </div>
       </div>
-      <h3 className="to-cflatyellow bg-gradient-to-r from-amber-300 bg-clip-text text-transparent">
+      <h3 className="bg-gradient-to-r from-amber-300 to-cflatyellow bg-clip-text text-transparent">
         {heroData.sitesubheading}
       </h3>
       <p className="max-w-md">{heroData.sitedescription}</p>
@@ -49,7 +49,7 @@ const Hero = () => {
 
 const SocialLinks = () => {
   return (
-    <ul className="border-cflatyellow bg-cflatblue text-cflatyellow ring-cflatblue flex w-fit gap-9 rounded-md border-4 px-3 py-1.5 ring-4">
+    <ul className="flex w-fit gap-9 rounded-md border-4 border-cflatyellow bg-cflatblue px-3 py-1.5 text-cflatyellow ring-4 ring-cflatblue">
       <li>
         <a
           href="https://www.instagram.com/cflatrun/"

@@ -24,7 +24,10 @@ const Members = () => {
   const nonOfficers: Member[] = sortedCurrentMembers.filter((member: Member) => !member.position);
 
   return (
-    <section className="flex w-full flex-col items-center gap-3">
+    <section
+      id="members"
+      className="flex w-full scroll-m-16 flex-col items-center gap-3"
+    >
       <MembersSubsection
         heading="Officers"
         members={officers}
@@ -61,7 +64,7 @@ const MembersSubsection = ({
 
 const MembersList = ({ members, image }: { members: Member[]; image: string }) => {
   return (
-    <ul className="relative z-10 grid w-full max-w-[1280px] grid-cols-1 place-items-center gap-3 border-t-2 border-amber-300 p-3 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="relative z-10 grid w-full max-w-[1280px] grid-cols-1 place-items-center gap-3 rounded-t-none border-t-2 border-cflatyellow p-3 sm:grid-cols-2 lg:grid-cols-3">
       <img
         src={image}
         alt=""

@@ -21,7 +21,7 @@ body {
     @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
   }
   h2 {
-    @apply from-cflatyellow w-full scroll-m-20 border-amber-300 bg-gradient-to-r to-amber-300 bg-clip-text pb-3 ps-6 text-start text-3xl font-semibold tracking-tight text-transparent first:mt-0;
+    @apply w-full scroll-m-20 border-amber-300 bg-gradient-to-r from-cflatyellow to-amber-300 bg-clip-text pb-3 ps-6 text-start text-3xl font-semibold tracking-tight text-transparent first:mt-0;
   }
   h3 {
     @apply scroll-m-20 text-2xl font-semibold tracking-tight;
@@ -40,4 +40,7 @@ body {
 
 .scrollbar-thumb-cflatyellow {
   scrollbar-color: var(--cflatyellow) var(--background);
+}
+.scrollbar-thumb-zinc {
+  scrollbar-color: #a1a1aa #09090b;
 }
