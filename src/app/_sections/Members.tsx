@@ -24,29 +24,44 @@ const Members = () => {
   const nonOfficers: Member[] = sortedCurrentMembers.filter((member: Member) => !member.position);
 
   return (
-    <section className="flex flex-col items-center gap-6">
-      <h3>Officers</h3>
-      <MembersList members={officers} />
-      <h3>Members</h3>
-      <MembersList members={nonOfficers} />
+    <section className="flex w-full flex-col items-center gap-9">
+      <MembersSubsection
+        heading="Officers"
+        members={officers}
+      />
+      <MembersSubsection
+        heading="Members"
+        members={nonOfficers}
+      />
     </section>
+  );
+};
+
+const MembersSubsection = ({ heading, members }: { heading: string; members: Member[] }) => {
+  return (
+    <div className="w-full rounded-md bg-gradient-to-b from-slate-950 to-slate-800">
+      <h2>{heading}</h2>
+      <MembersList members={members} />
+    </div>
   );
 };
 
 const MembersList = ({ members }: { members: Member[] }) => {
   return (
-    <ul className="grid w-full max-w-[1280px] grid-cols-1 place-items-center gap-3 lg:grid-cols-3">
+    <ul className="grid w-full max-w-[1280px] grid-cols-1 place-items-center gap-3 rounded-2xl border-x-2 border-amber-300 lg:grid-cols-3">
       {members.map((member: Member) => (
         <li
           key={member.name}
-          className="grid w-full max-w-[426.6667px] grid-cols-12 grid-rows-6 text-balance rounded-md p-6 odd:bg-slate-800 even:bg-slate-900"
+          className="flex min-h-24 w-full flex-col text-balance rounded-md px-6 py-3 odd:bg-slate-800 even:bg-slate-900"
         >
-          <h4 className="col-span-10 row-span-2 self-end">{member.name}</h4>
-          <p className="col-span-2 row-span-2 self-end text-right text-sm text-slate-400">
-            {member.classof}
-          </p>
-          <p className="col-span-10 row-span-4 text-sm text-slate-400">{member.position}</p>
-          <p className="col-span-2 row-span-4 text-right text-sm">{member.voicepart}</p>
+          <h3 className="text-xl">{member.name}</h3>
+          <div className="flex h-full flex-col pt-1 text-sm">
+            <p className="text-sm text-slate-400">{member.position}</p>
+            <p className="flex gap-2">
+              <span className="text-slate-400">{member.classof}</span>
+              <span>{member.voicepart}</span>
+            </p>
+          </div>
         </li>
       ))}
     </ul>
