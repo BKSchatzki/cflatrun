@@ -39,7 +39,7 @@ const Members = () => {
 
 const MembersSubsection = ({ heading, members }: { heading: string; members: Member[] }) => {
   return (
-    <div className="w-full rounded-md bg-gradient-to-b from-slate-950 to-slate-800">
+    <div className="w-full rounded-md bg-gradient-to-b from-slate-950 to-indigo-950">
       <h2>{heading}</h2>
       <MembersList members={members} />
     </div>
@@ -52,7 +52,7 @@ const MembersList = ({ members }: { members: Member[] }) => {
       {members.map((member: Member) => (
         <li
           key={member.name}
-          className="flex h-full min-h-24 w-full flex-col text-balance rounded-md px-6 py-3 odd:bg-slate-800 even:bg-slate-900"
+          className="flex h-full min-h-24 w-full flex-col text-balance rounded-md px-6 py-3 transition-all duration-300 odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25"
         >
           <h3 className="text-xl">{member.name}</h3>
           <div className="flex h-full flex-col pt-1 text-sm">

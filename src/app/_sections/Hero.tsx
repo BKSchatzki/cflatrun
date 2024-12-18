@@ -24,7 +24,7 @@ const Hero = () => {
         <img
           src="/logo.png"
           alt="C Flat Run Logo"
-          className="max-h-28 max-w-28"
+          className="hover:shadow-cflatyellow max-h-28 max-w-28 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-md"
         />
         <div className="space-y-3">
           <h1 className="from-cflatyellow bg-gradient-to-r to-amber-300 bg-clip-text text-transparent">
@@ -43,16 +43,15 @@ const Hero = () => {
 
 const SocialLinks = () => {
   return (
-    <ul className="border-cflatyellow bg-cflatblue text-cflatyellow ring-cflatblue flex w-fit gap-9 rounded-md border-4 px-3 py-1.5 ring-4 transition-colors">
+    <ul className="border-cflatyellow bg-cflatblue text-cflatyellow ring-cflatblue flex w-fit gap-9 rounded-md border-4 px-3 py-1.5 ring-4">
       <li>
         <a
           href="https://www.instagram.com/cflatrun/"
           target="_blank"
           rel="noreferrer"
-          className="transition-colors hover:text-foreground"
         >
           <span className="sr-only">Instagram Link</span>
-          <Instagram />
+          <Instagram className="transition-all duration-300 hover:scale-110 hover:text-foreground" />
         </a>
       </li>
       <li>
@@ -60,10 +59,9 @@ const SocialLinks = () => {
           href="https://www.facebook.com/cflatrun"
           target="_blank"
           rel="noreferrer"
-          className="transition-colors hover:text-foreground"
         >
           <span className="sr-only">Facebook Link</span>
-          <Facebook />
+          <Facebook className="transition-all duration-300 hover:scale-110 hover:text-foreground" />
         </a>
       </li>
       <li>
@@ -71,10 +69,9 @@ const SocialLinks = () => {
           href="https://youtube.com/@cflatrun8418"
           target="_blank"
           rel="noreferrer"
-          className="transition-colors hover:text-foreground"
         >
           <span className="sr-only">Youtube Link</span>
-          <Youtube />
+          <Youtube className="transition-all duration-300 hover:scale-110 hover:text-foreground" />
         </a>
       </li>
     </ul>
