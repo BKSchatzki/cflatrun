@@ -6,7 +6,7 @@ import Members from './_sections/Members';
 
 export default function Home() {
   return (
-    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 px-2 font-[family-name:var(--font-geist-sans)] sm:px-20">
+    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 px-3 font-[family-name:var(--font-geist-sans)] sm:px-6 md:px-12">
       <header></header>
       <main className="row-start-2 flex w-full max-w-[calc(1280px)] flex-col items-center gap-[4.5rem]">
         <Hero />

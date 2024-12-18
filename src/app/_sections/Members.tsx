@@ -48,11 +48,11 @@ const MembersSubsection = ({ heading, members }: { heading: string; members: Mem
 
 const MembersList = ({ members }: { members: Member[] }) => {
   return (
-    <ul className="grid w-full max-w-[1280px] grid-cols-1 place-items-center gap-3 rounded-2xl border-x-2 border-amber-300 lg:grid-cols-3">
+    <ul className="grid w-full max-w-[1280px] grid-cols-1 place-items-center gap-3 border-t-2 border-amber-300 p-3 sm:grid-cols-2 lg:grid-cols-3">
       {members.map((member: Member) => (
         <li
           key={member.name}
-          className="flex min-h-24 w-full flex-col text-balance rounded-md px-6 py-3 odd:bg-slate-800 even:bg-slate-900"
+          className="flex h-full min-h-24 w-full flex-col text-balance rounded-md px-6 py-3 odd:bg-slate-800 even:bg-slate-900"
         >
           <h3 className="text-xl">{member.name}</h3>
           <div className="flex h-full flex-col pt-1 text-sm">
