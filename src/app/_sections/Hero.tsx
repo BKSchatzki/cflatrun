@@ -19,7 +19,7 @@ const Hero = () => {
   const heroData: HeroData = getDataFromFile<HeroData>(heroPath);
 
   return (
-    <section className="border-cflatyellow flex max-w-[1280px] flex-col gap-6 self-start text-balance rounded-2xl border-b-2 bg-gradient-to-b from-slate-950 to-slate-800 p-6">
+    <section className="border-cflatyellow relative z-10 flex w-full max-w-[1280px] flex-col gap-6 self-start text-balance rounded-2xl border-b-2 bg-gradient-to-b from-slate-950 to-slate-800 p-6 pt-[3.75rem]">
       <div className="flex gap-3 max-sm:flex-col sm:items-center">
         <img
           src="/logo.png"
@@ -37,6 +37,12 @@ const Hero = () => {
         {heroData.sitesubheading}
       </h3>
       <p className="max-w-md">{heroData.sitedescription}</p>
+      <img
+        src="/uploads/fuel-and-fuddle.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-1/2 -z-10 size-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-10 blur-sm"
+      />
     </section>
   );
 };

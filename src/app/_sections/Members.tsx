@@ -24,38 +24,57 @@ const Members = () => {
   const nonOfficers: Member[] = sortedCurrentMembers.filter((member: Member) => !member.position);
 
   return (
-    <section className="flex w-full flex-col items-center gap-9">
+    <section className="flex w-full flex-col items-center gap-3">
       <MembersSubsection
         heading="Officers"
         members={officers}
+        image="/uploads/officers.png"
       />
       <MembersSubsection
         heading="Members"
         members={nonOfficers}
+        image="/uploads/outside-union.png"
       />
     </section>
   );
 };
 
-const MembersSubsection = ({ heading, members }: { heading: string; members: Member[] }) => {
+const MembersSubsection = ({
+  heading,
+  members,
+  image,
+}: {
+  heading: string;
+  members: Member[];
+  image: string;
+}) => {
   return (
     <div className="w-full rounded-md bg-gradient-to-b from-slate-950 to-indigo-950">
       <h2>{heading}</h2>
-      <MembersList members={members} />
+      <MembersList
+        members={members}
+        image={image}
+      />
     </div>
   );
 };
 
-const MembersList = ({ members }: { members: Member[] }) => {
+const MembersList = ({ members, image }: { members: Member[]; image: string }) => {
   return (
-    <ul className="grid w-full max-w-[1280px] grid-cols-1 place-items-center gap-3 border-t-2 border-amber-300 p-3 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="relative z-10 grid w-full max-w-[1280px] grid-cols-1 place-items-center gap-3 border-t-2 border-amber-300 p-3 sm:grid-cols-2 lg:grid-cols-3">
+      <img
+        src={image}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-1/2 -z-10 size-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-10 blur-sm"
+      />
       {members.map((member: Member) => (
         <li
           key={member.name}
-          className="flex h-full min-h-24 w-full flex-col text-balance rounded-md px-6 py-3 transition-all duration-300 odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25"
+          className="flex min-h-24 w-full flex-col text-balance rounded-md px-6 py-3 transition-all duration-300 odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25"
         >
           <h3 className="text-xl">{member.name}</h3>
-          <div className="flex h-full flex-col pt-1 text-sm">
+          <div className="flex flex-col pt-1 text-sm">
             <p className="text-sm text-slate-400">{member.position}</p>
             <p className="flex gap-2">
               <span className="text-slate-400">{member.classof}</span>
