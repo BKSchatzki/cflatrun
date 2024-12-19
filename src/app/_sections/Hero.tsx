@@ -19,14 +19,14 @@ const Hero = () => {
   const heroData: HeroData = getDataFromFile<HeroData>(heroPath);
 
   return (
-    <section className="relative z-10 flex w-full max-w-[1280px] flex-col gap-6 self-start text-balance rounded-2xl border-b-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-slate-800 p-6 pt-[3.75rem]">
+    <section className="relative z-10 flex w-full flex-col gap-6 self-start text-balance rounded-2xl border-b-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-slate-800 p-6 pt-[3.75rem]">
       <div className="flex gap-3 max-sm:flex-col sm:items-center">
         <img
           src="/logo.png"
           alt="C Flat Run Logo"
           className="max-h-28 max-w-28 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-md hover:shadow-cflatyellow"
         />
-        <div className="space-y-3">
+        <div className="w-fit space-y-3">
           <h1 className="bg-gradient-to-r from-cflatyellow to-amber-300 bg-clip-text text-transparent">
             {heroData.siteheading}
           </h1>
@@ -49,7 +49,7 @@ const Hero = () => {
 
 const SocialLinks = () => {
   return (
-    <ul className="flex w-fit gap-9 rounded-md border-4 border-cflatyellow bg-cflatblue px-3 py-1.5 text-cflatyellow ring-4 ring-cflatblue">
+    <ul className="flex w-full justify-center gap-9 rounded-md border-4 border-cflatyellow bg-cflatblue px-3 py-1.5 text-cflatyellow ring-4 ring-cflatblue">
       <li>
         <a
           href="https://www.instagram.com/cflatrun/"

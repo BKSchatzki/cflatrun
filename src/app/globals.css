@@ -41,6 +41,3 @@ body {
 .scrollbar-thumb-cflatyellow {
   scrollbar-color: var(--cflatyellow) var(--background);
 }
-.scrollbar-thumb-zinc {
-  scrollbar-color: #a1a1aa #09090b;
-}

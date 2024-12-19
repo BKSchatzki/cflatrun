@@ -5,10 +5,7 @@ import { useState } from 'react';
 
 import {
   Disc3,
-  Mail,
-  MessageSquareMore,
   SendHorizonal,
-  Signature,
   ThumbsUp,
 } from 'lucide-react';
 import {
@@ -75,7 +72,7 @@ const Contact = () => {
         name="contact"
         onSubmit={form.handleSubmit(handleFormSubmission)}
         data-netlify="true"
-        className="relative z-10 col-start-1 flex w-full flex-col gap-8 self-end"
+        className="border-zinc relative z-10 col-start-1 flex w-full flex-col gap-9 rounded-md rounded-t-none border-t-2 bg-gradient-to-b from-zinc-950 to-emerald-950 px-6 py-3 pt-9"
       >
         <input
           type="hidden"
@@ -93,20 +90,17 @@ const Contact = () => {
             name="name"
             control={form.control}
             render={({ field }) => (
-              <div className="relative">
-                <input
-                  type="text"
-                  id="name"
-                  placeholder="Name"
-                  {...field}
-                  className="peer w-full rounded-md bg-slate-950/50 px-4 py-1.5 indent-5 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-cflatyellow"
-                />
-                <Signature className="absolute left-2 top-2 size-5 text-sm text-slate-400 transition-all duration-300 peer-focus:rotate-6 peer-focus:animate-pulse peer-focus:text-cflatyellow" />
-              </div>
+              <input
+                type="text"
+                id="name"
+                placeholder="Name"
+                {...field}
+                className="w-full border-b border-zinc-400 bg-zinc-950/50 px-4 py-1.5 text-zinc-50 placeholder:text-zinc-400 focus:border-zinc-50 focus:outline-none"
+              />
             )}
           />
           {form.formState.errors.name && (
-            <p className="absolute -bottom-5 left-0 text-sm text-red-500">
+            <p className="absolute -bottom-6 left-3 text-red-500">
               {form.formState.errors.name.message}
             </p>
           )}
@@ -122,20 +116,17 @@ const Contact = () => {
             name="email"
             control={form.control}
             render={({ field }) => (
-              <div className="relative">
-                <input
-                  type="text"
-                  id="email"
-                  placeholder="Email"
-                  {...field}
-                  className="peer w-full rounded-md bg-slate-950/50 px-4 py-1.5 indent-5 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-cflatyellow"
-                />
-                <Mail className="absolute left-2 top-2 size-5 text-sm text-slate-400 transition-all duration-300 peer-focus:rotate-6 peer-focus:animate-pulse peer-focus:text-cflatyellow" />
-              </div>
+              <input
+                type="text"
+                id="email"
+                placeholder="Email"
+                {...field}
+                className="w-full border-b border-zinc-400 bg-zinc-950/50 px-3 py-1.5 text-zinc-50 placeholder:text-zinc-400 focus:border-zinc-50 focus:outline-none"
+              />
             )}
           />
           {form.formState.errors.email && (
-            <p className="absolute -bottom-5 left-0 text-sm text-red-500">
+            <p className="absolute -bottom-6 left-3 text-red-500">
               {form.formState.errors.email.message}
             </p>
           )}
@@ -151,20 +142,17 @@ const Contact = () => {
             name="message"
             control={form.control}
             render={({ field }) => (
-              <div className="relative">
-                <textarea
-                  id="message"
-                  placeholder="Message"
-                  rows={5}
-                  {...field}
-                  className="scrollbar-thin scrollbar-thumb-cflatyellow peer w-full resize-none text-wrap rounded-md bg-slate-950/50 px-4 py-1.5 indent-5 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-cflatyellow"
-                />
-                <MessageSquareMore className="absolute left-2 top-2 size-5 text-sm text-slate-400 transition-all duration-300 peer-focus:rotate-6 peer-focus:animate-pulse peer-focus:text-cflatyellow" />
-              </div>
+              <textarea
+                id="message"
+                placeholder="Message"
+                rows={5}
+                {...field}
+                className="scrollbar-thin scrollbar-thumb-zinc w-full resize-none text-wrap border-b border-zinc-400 bg-zinc-950/50 px-3 py-1.5 text-zinc-50 placeholder:text-zinc-400 focus:border-zinc-50 focus:outline-none"
+              />
             )}
           />
           {form.formState.errors.message && (
-            <p className="absolute -bottom-4 left-0 text-sm text-red-500">
+            <p className="absolute -bottom-5 left-3 text-red-500">
               {form.formState.errors.message.message}
             </p>
           )}
@@ -173,7 +161,7 @@ const Contact = () => {
           <button
             type="submit"
             disabled={isSubmitting || submitIsSuccessful}
-            className="h-8 w-full rounded-md bg-gradient-to-r from-cflatyellow to-amber-300 text-lg font-semibold text-background outline-offset-2 transition-all duration-100 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50"
+            className="h-8 w-full rounded-md bg-zinc-50 text-lg font-semibold text-zinc-950 transition-all duration-100 active:scale-95 disabled:opacity-50"
           >
             {isSubmitting ? (
               <span className="flex items-center justify-center gap-1.5">
@@ -193,16 +181,22 @@ const Contact = () => {
             )}
           </button>
           {submitIsSuccessful && (
-            <p className="left-04 absolute bottom-3 w-full bg-gradient-to-r from-cflatyellow to-amber-300 bg-clip-text text-sm text-transparent">
-              Thanks! Talk soon.
+            <p className="absolute bottom-3 left-1/2 w-full -translate-x-1/2 text-foreground">
+              Thanks! We'll get back to you soon.
             </p>
           )}
           {submitIsFailed && (
-            <p className="absolute bottom-3 left-0 w-full text-sm text-red-500">
-              Please try again.
+            <p className="absolute bottom-3 left-1/2 w-full -translate-x-1/2 text-foreground">
+              Something went wrong. Please try again.
             </p>
           )}
         </div>
+        <img
+          src="/uploads/orchard.png"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute left-1/2 top-1/2 -z-10 size-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-10 blur-sm"
+        />
       </form>
     </FormProvider>
   );

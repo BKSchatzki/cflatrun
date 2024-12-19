@@ -11,7 +11,9 @@ export default function Home() {
         <Members />
         <Music />
       </main>
-      <Footer />
+      <div className="w-full max-w-[1280px] items-center px-3 pt-12 sm:px-6 md:px-12">
+        <Footer />
+      </div>
     </div>
   );
 }

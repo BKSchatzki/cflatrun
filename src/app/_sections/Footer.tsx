@@ -14,13 +14,13 @@ import ContactForm from '@/components/ContactForm';
 
 const Footer = () => {
   return (
-    <footer className="relative z-10 row-start-3 w-full items-center text-balance border-t-2 border-zinc-50 bg-zinc-950 pb-3 text-center text-sm text-zinc-400">
-      <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-9 px-3 py-6 sm:grid-cols-2 sm:px-6 md:px-12">
+    <footer className="relative z-10 flex w-full flex-col gap-6 self-start text-balance rounded-t-2xl border-t-2 border-cflatyellow bg-gradient-to-t from-slate-950 to-slate-800 p-6 pt-[3.75rem]">
+      <div className="grid max-w-[1280px] grid-cols-1 justify-end gap-9 px-3 py-6 sm:grid-cols-2 sm:px-6 md:px-12">
         <div>
-          <h2 className="text-zinc-50">Contact</h2>
+          <h2 className="sr-only">Contact Us</h2>
           <ContactForm />
         </div>
-        <div className="flex flex-col items-center gap-6 self-center">
+        <div className="flex flex-col items-center gap-6 self-end">
           <img
             src="/logo.png"
             alt="C Flat Run Logo"
@@ -28,17 +28,17 @@ const Footer = () => {
           />
           <div className="flex gap-3">
             <SiteLinks />
-            <div className="h-28 border"></div>
+            <div className="h-28 border border-slate-400"></div>
             <SocialLinks />
           </div>
-          <div className="flex flex-col gap-1.5">
+          <div className="flex flex-col items-center gap-1.5 pb-9 text-center text-sm text-slate-400">
             <span>
               &copy; 2025{' '}
               <Link
                 href="/admin/index.html"
                 target="_blank"
                 rel="noreferrer"
-                className="bg-gradient-to-r from-cflatyellow to-amber-300 bg-clip-text text-transparent transition-all duration-300 hover:scale-110 hover:text-foreground"
+                className="bg-gradient-to-r from-cflatyellow to-amber-300 bg-clip-text font-semibold text-transparent transition-colors duration-300 hover:text-foreground"
               >
                 C Flat Run
               </Link>
@@ -50,7 +50,7 @@ const Footer = () => {
                 href="https://bkschatzki.com"
                 target="_blank"
                 rel="noreferrer"
-                className="underline underline-offset-2 transition-all duration-300 hover:scale-110 hover:text-foreground"
+                className="underline underline-offset-2 transition-colors duration-300 hover:text-foreground"
               >
                 Brendan K. Schatzki
               </a>
@@ -58,6 +58,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <img
+        src="/uploads/orchard.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-1/2 -z-10 size-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-10 blur-sm"
+      />
     </footer>
   );
 };
@@ -66,32 +72,32 @@ export default Footer;
 
 const SiteLinks = () => {
   return (
-    <ul className="flex flex-col items-end gap-3 px-3 py-1.5">
+    <ul className="flex flex-col items-end gap-3 px-3 py-1.5 text-slate-400">
       <li>
         <a
           href="#top"
-          className="flex flex-row gap-3 transition-all duration-300 hover:scale-110 hover:text-foreground"
+          className="group flex flex-row gap-3"
         >
-          <span>Back to Top</span>
-          <CircleChevronUp />
+          <span className="transition-all duration-300 group-hover:text-foreground">To Top</span>
+          <CircleChevronUp className="transition-all duration-300 group-hover:scale-110 group-hover:text-cflatyellow" />
         </a>
       </li>
       <li>
         <a
           href="#members"
-          className="flex flex-row gap-3 transition-all duration-300 hover:scale-110 hover:text-foreground"
+          className="group flex flex-row gap-3 hover:text-foreground"
         >
-          <span>Members</span>
-          <UsersRound />
+          <span className="transition-all duration-300 group-hover:text-foreground">Members</span>
+          <UsersRound className="transition-all duration-300 group-hover:scale-110 group-hover:text-cflatyellow" />
         </a>
       </li>
       <li>
         <a
           href="#concerts"
-          className="flex flex-row gap-3 transition-all duration-300 hover:scale-110 hover:text-foreground"
+          className="group flex flex-row gap-3 hover:text-foreground"
         >
-          <span>Concerts</span>
-          <Theater />
+          <span className="transition-all duration-300 group-hover:text-foreground">Concerts</span>
+          <Theater className="transition-all duration-300 group-hover:scale-110 group-hover:text-cflatyellow" />
         </a>
       </li>
     </ul>
@@ -100,16 +106,16 @@ const SiteLinks = () => {
 
 const SocialLinks = () => {
   return (
-    <ul className="flex flex-col items-start gap-3 px-3 py-1.5">
+    <ul className="flex flex-col items-start gap-3 px-3 py-1.5 text-slate-400">
       <li>
         <a
           href="https://www.instagram.com/cflatrun/"
           target="_blank"
           rel="noreferrer"
-          className="flex flex-row-reverse gap-3 transition-all duration-300 hover:scale-110 hover:text-foreground"
+          className="group flex flex-row-reverse gap-3 hover:text-foreground"
         >
-          <span>Instagram</span>
-          <Instagram className="" />
+          <span className="transition-all duration-300 group-hover:text-foreground">Instagram</span>
+          <Instagram className="transition-all duration-300 group-hover:scale-110 group-hover:text-cflatyellow" />
         </a>
       </li>
       <li>
@@ -117,10 +123,10 @@ const SocialLinks = () => {
           href="https://www.facebook.com/cflatrun"
           target="_blank"
           rel="noreferrer"
-          className="flex flex-row-reverse gap-3 transition-all duration-300 hover:scale-110 hover:text-foreground"
+          className="group flex flex-row-reverse gap-3 hover:text-foreground"
         >
-          <span>Facebook</span>
-          <Facebook />
+          <span className="transition-all duration-300 group-hover:text-foreground">Facebook</span>
+          <Facebook className="transition-all duration-300 group-hover:scale-110 group-hover:text-cflatyellow" />
         </a>
       </li>
       <li>
@@ -128,10 +134,10 @@ const SocialLinks = () => {
           href="https://youtube.com/@cflatrun8418"
           target="_blank"
           rel="noreferrer"
-          className="flex flex-row-reverse gap-3 transition-all duration-300 hover:scale-110 hover:text-foreground"
+          className="group flex flex-row-reverse gap-3 hover:text-foreground"
         >
-          <span>Youtube</span>
-          <Youtube />
+          <span className="transition-all duration-300 group-hover:text-foreground">Youtube</span>
+          <Youtube className="transition-all duration-300 group-hover:scale-110 group-hover:text-cflatyellow" />
         </a>
       </li>
     </ul>
