@@ -47,7 +47,7 @@ const Footer = () => {
             <span>
               Site design by{' '}
               <a
-                href="https://bkschatzki.com"
+                href="https://bkschatzki.dev"
                 target="_blank"
                 rel="noreferrer"
                 className="underline underline-offset-2 transition-colors duration-300 hover:text-foreground"
