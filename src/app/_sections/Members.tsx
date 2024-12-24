@@ -52,7 +52,7 @@ const MembersSubsection = ({
   image: string;
 }) => {
   return (
-    <div className="w-full rounded-md bg-gradient-to-b from-slate-950 to-indigo-950">
+    <div className="w-full rounded-md">
       <h2>{heading}</h2>
       <MembersList
         members={members}
@@ -64,7 +64,7 @@ const MembersSubsection = ({
 
 const MembersList = ({ members, image }: { members: Member[]; image: string }) => {
   return (
-    <ul className="relative z-10 grid w-full max-w-[1280px] grid-cols-1 place-items-center gap-3 rounded-t-none border-t-2 border-cflatyellow p-3 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="relative z-10 grid w-full max-w-[1280px] grid-cols-1 place-items-center gap-3 rounded-t-none border-t-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-indigo-950 p-3 sm:grid-cols-2 lg:grid-cols-3">
       <img
         src={image}
         alt=""

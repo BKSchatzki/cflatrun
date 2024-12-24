@@ -32,7 +32,7 @@ const Concerts = () => {
   return (
     <section
       id="concerts"
-      className="w-full scroll-m-16 rounded-md bg-gradient-to-b from-slate-950 to-yellow-950"
+      className="w-full scroll-m-16 rounded-md"
     >
       <h2>Recent Concerts</h2>
       <ConcertsList concerts={sortedConcerts} />
@@ -42,7 +42,7 @@ const Concerts = () => {
 
 const ConcertsList = ({ concerts }: { concerts: Concert[] }) => {
   return (
-    <ul className="relative z-10 grid w-full max-w-[1280px] grid-cols-1 place-items-center gap-3 border-t-2 border-cflatyellow p-3 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="relative z-10 grid w-full max-w-[1280px] grid-cols-1 place-items-center gap-3 border-t-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-yellow-950 p-3 sm:grid-cols-2 lg:grid-cols-3">
       <img
         src="/uploads/suspenders-concert.png"
         alt=""

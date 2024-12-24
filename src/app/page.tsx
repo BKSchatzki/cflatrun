@@ -5,7 +5,7 @@ import Members from './_sections/Members';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center font-[family-name:var(--font-geist-sans)]">
+    <div className="bg-dots flex min-h-screen flex-col items-center font-[family-name:var(--font-geist-sans)]">
       <main className="flex w-full max-w-[1280px] flex-col items-center gap-3 px-3 pb-9 sm:px-6 md:px-12">
         <Hero />
         <Members />
