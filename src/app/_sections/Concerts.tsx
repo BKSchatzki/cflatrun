@@ -32,7 +32,7 @@ const Concerts = () => {
   return (
     <section
       id="concerts"
-      className="w-full scroll-m-16 rounded-md"
+      className="motion-preset-blur-right-lg motion-delay-[400ms] w-full scroll-m-16 rounded-md"
     >
       <h2>Recent Concerts</h2>
       <ConcertsList concerts={sortedConcerts} />
@@ -53,7 +53,7 @@ const ConcertsList = ({ concerts }: { concerts: Concert[] }) => {
         (concert: Concert, index: number) => (
           <li
             key={index || concert.concertname}
-            className="scrollbar-thin scrollbar-thumb-cflatyellow flex max-h-[36rem] w-full flex-col gap-3 overflow-y-scroll text-balance rounded-md p-6 transition-all duration-300 odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25"
+            className="motion-preset-blur-left-lg motion-delay-500 scrollbar-thin scrollbar-thumb-cflatyellow flex max-h-[36rem] w-full flex-col gap-3 overflow-y-scroll text-balance rounded-md p-6 transition-all duration-300 odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25"
           >
             <div className="border-b pb-1.5">
               <h3 className="">{concert.concertname}</h3>

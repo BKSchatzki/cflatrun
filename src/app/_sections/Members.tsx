@@ -32,11 +32,13 @@ const Members = () => {
         heading="Officers"
         members={officers}
         image="/uploads/officers.png"
+        delayDurationClass="motion-delay-200"
       />
       <MembersSubsection
         heading="Members"
         members={nonOfficers}
         image="/uploads/outside-union.png"
+        delayDurationClass="motion-delay-300"
       />
     </section>
   );
@@ -46,13 +48,17 @@ const MembersSubsection = ({
   heading,
   members,
   image,
+  delayDurationClass,
 }: {
   heading: string;
   members: Member[];
   image: string;
+  delayDurationClass: string;
 }) => {
   return (
-    <div className="w-full rounded-md">
+    <div
+      className={`motion-preset-blur-right-lg motion-delay-200 w-full rounded-md ${delayDurationClass}`}
+    >
       <h2>{heading}</h2>
       <MembersList
         members={members}
@@ -74,7 +80,7 @@ const MembersList = ({ members, image }: { members: Member[]; image: string }) =
       {members.map((member: Member) => (
         <li
           key={member.name}
-          className="flex min-h-24 w-full flex-col text-balance rounded-md px-6 py-3 transition-all duration-300 odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25"
+          className={`motion-preset-blur-left-lg motion-delay-[400ms] flex min-h-24 w-full flex-col text-balance rounded-md px-6 py-3 transition-all duration-300 odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25`}
         >
           <h3 className="text-xl">{member.name}</h3>
           <div className="flex flex-col pt-1 text-sm">

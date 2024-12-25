@@ -19,7 +19,7 @@ const Hero = () => {
   const heroData: HeroData = getDataFromFile<HeroData>(heroPath);
 
   return (
-    <section className="relative z-10 flex w-full flex-col gap-6 self-start text-balance rounded-2xl border-b-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-slate-800 p-6 pt-[3.75rem]">
+    <section className="motion-preset-blur-down-lg motion-delay-100 relative z-10 flex w-full flex-col gap-6 self-start text-balance rounded-2xl border-b-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-slate-800 p-6 pt-[3.75rem]">
       <div className="flex gap-3 max-sm:flex-col sm:items-center">
         <img
           src="/logo.png"
@@ -41,7 +41,7 @@ const Hero = () => {
         src="/uploads/fuel-and-fuddle.png"
         alt=""
         aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-1/2 -z-10 size-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-10 blur-sm"
+        className="motion pointer-events-none absolute left-1/2 top-1/2 -z-10 size-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-10 blur-sm"
       />
     </section>
   );
