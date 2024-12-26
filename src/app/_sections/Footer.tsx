@@ -15,8 +15,8 @@ import ContactForm from '@/components/ContactForm';
 const Footer = () => {
   return (
     <div className="w-full max-w-[1280px] px-3 sm:px-6 md:px-12">
-      <h2>Contact Us</h2>
-      <footer className="motion-preset-blur-up-lg motion-delay-500 relative z-10 flex w-full flex-col gap-6 self-start text-balance rounded-t-2xl border-t-2 border-cflatyellow bg-gradient-to-t from-slate-950 to-slate-800 p-6 pt-[3.75rem]">
+      <h2 className="motion-preset-blur-right-lg motion-delay-500">Contact Us</h2>
+      <footer className="motion-preset-blur-up-lg relative z-10 flex w-full flex-col gap-6 self-start text-balance rounded-t-2xl border-t-2 border-cflatyellow bg-gradient-to-t from-slate-950 to-slate-800 p-6 pt-[3.75rem] motion-delay-500">
         <div className="grid max-w-[1280px] grid-cols-1 justify-end gap-9 px-3 py-6 sm:grid-cols-2 sm:px-6 md:px-12">
           <div>
             <h2 className="sr-only">Contact Us</h2>
