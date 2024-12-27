@@ -1,5 +1,5 @@
 ---
-siteheading: C Flat Runnn
+siteheading: C Flat Run
 sitesubheading: Pitt’s Sex-C-est A Cappella Group
 sitedescription: Welcome to the website for "Pitt's Sex-C-est A Cappella Group"!
   Established in 2009, C Flat Run is an all-gender a cappella group at the
