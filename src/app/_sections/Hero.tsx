@@ -3,9 +3,21 @@ import {
   Instagram,
   Youtube,
 } from 'lucide-react';
+import {
+  Caveat,
+  Dancing_Script,
+} from 'next/font/google';
 import path from 'path';
 
 import { getDataFromFile } from '@/utils/graymatter';
+
+const dancingScript = Dancing_Script({
+  subsets: ['latin'],
+});
+
+const caveat = Caveat({
+  subsets: ['latin'],
+});
 
 const heroPath = path.join(process.cwd(), 'src/content/sitecontent/hero.md');
 interface HeroData {
@@ -19,21 +31,23 @@ const Hero = () => {
   const heroData: HeroData = getDataFromFile<HeroData>(heroPath);
 
   return (
-    <section className="motion-preset-blur-down-lg motion-delay-100 relative z-10 flex w-full flex-col gap-6 self-start text-balance rounded-2xl border-b-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-slate-800 p-6 pt-[3.75rem]">
+    <section className="motion-preset-blur-down-lg relative z-10 flex w-full flex-col gap-6 self-start text-balance rounded-2xl border-b-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-slate-800 p-6 pt-[3.75rem] motion-delay-100">
       <div className="flex gap-3 max-sm:flex-col sm:items-center">
         <img
           src="/logo.png"
           alt="C Flat Run Logo"
           className="max-h-28 max-w-28 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-md hover:shadow-cflatyellow"
         />
-        <div className="w-fit space-y-3">
+        <div className={`w-fit space-y-3 ${dancingScript.className}`}>
           <h1 className="bg-gradient-to-r from-cflatyellow to-amber-300 bg-clip-text text-transparent">
             {heroData.siteheading}
           </h1>
           <SocialLinks />
         </div>
       </div>
-      <h3 className="bg-gradient-to-r from-amber-300 to-cflatyellow bg-clip-text text-transparent">
+      <h3
+        className={`${caveat.className} bg-gradient-to-r from-amber-300 to-cflatyellow bg-clip-text text-transparent`}
+      >
         {heroData.sitesubheading}
       </h3>
       <p className="max-w-md">{heroData.sitedescription}</p>

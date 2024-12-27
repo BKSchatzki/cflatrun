@@ -1,8 +1,20 @@
 import React from 'react';
 
+import {
+  Caveat,
+  Dancing_Script,
+} from 'next/font/google';
 import path from 'path';
 
 import { getDataFromDirectory } from '@/utils/graymatter';
+
+const dancingScript = Dancing_Script({
+  subsets: ['latin'],
+});
+
+const caveat = Caveat({
+  subsets: ['latin'],
+});
 
 const membersDirectory = path.join(process.cwd(), 'src/content/members');
 
@@ -57,9 +69,9 @@ const MembersSubsection = ({
 }) => {
   return (
     <div
-      className={`motion-preset-blur-right-lg motion-delay-200 w-full rounded-md ${delayDurationClass}`}
+      className={`motion-preset-blur-right-lg w-full rounded-md motion-delay-200 ${delayDurationClass}`}
     >
-      <h2>{heading}</h2>
+      <h2 className={caveat.className}>{heading}</h2>
       <MembersList
         members={members}
         image={image}
@@ -80,14 +92,14 @@ const MembersList = ({ members, image }: { members: Member[]; image: string }) =
       {members.map((member: Member) => (
         <li
           key={member.name}
-          className={`motion-preset-blur-left-lg motion-delay-[400ms] flex min-h-24 w-full flex-col text-balance rounded-md px-6 py-3 transition-all duration-300 odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25`}
+          className={`motion-preset-blur-left-lg flex min-h-24 w-full flex-col text-balance rounded-md px-6 py-3 transition-all duration-300 motion-delay-[400ms] odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25`}
         >
-          <h3 className="text-xl">{member.name}</h3>
+          <h3 className={`text-2xl ${dancingScript.className}`}>{member.name}</h3>
           <div className="flex flex-col pt-1 text-sm">
             <p className="text-sm text-slate-400">{member.position}</p>
             <p className="flex gap-2">
               <span className="text-slate-400">{member.classof}</span>
-              <span>{member.voicepart}</span>
+              <span className={caveat.className}>{member.voicepart}</span>
             </p>
           </div>
         </li>

@@ -11,6 +11,7 @@ import {
   Signature,
   ThumbsUp,
 } from 'lucide-react';
+import { Dancing_Script } from 'next/font/google';
 import {
   Controller,
   FormProvider,
@@ -19,6 +20,10 @@ import {
 import { z } from 'zod';
 
 import { zodResolver } from '@hookform/resolvers/zod';
+
+const dancingScript = Dancing_Script({
+  subsets: ['latin'],
+});
 
 const formSchema = z.object({
   name: z.string().min(1, { message: 'Please enter your name.' }),
@@ -173,7 +178,7 @@ const Contact = () => {
           <button
             type="submit"
             disabled={isSubmitting || submitIsSuccessful}
-            className="h-8 w-full rounded-md bg-gradient-to-r from-cflatyellow to-amber-300 text-lg font-semibold text-background outline-offset-2 transition-all duration-100 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50"
+            className={`h-8 w-full rounded-md bg-gradient-to-r from-cflatyellow to-amber-300 text-xl font-black text-background outline-offset-2 transition-all duration-100 hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 ${dancingScript.className}`}
           >
             {isSubmitting ? (
               <span className="flex items-center justify-center gap-1.5">

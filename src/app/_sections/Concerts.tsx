@@ -1,8 +1,20 @@
 import React from 'react';
 
+import {
+  Caveat,
+  Dancing_Script,
+} from 'next/font/google';
 import path from 'path';
 
 import { getDataFromDirectory } from '@/utils/graymatter';
+
+const dancingScript = Dancing_Script({
+  subsets: ['latin'],
+});
+
+const caveat = Caveat({
+  subsets: ['latin'],
+});
 
 const concertsDirectory = path.join(process.cwd(), 'src/content/concerts');
 
@@ -32,9 +44,9 @@ const Concerts = () => {
   return (
     <section
       id="concerts"
-      className="motion-preset-blur-right-lg motion-delay-[400ms] w-full scroll-m-16 rounded-md"
+      className="motion-preset-blur-right-lg w-full scroll-m-16 rounded-md motion-delay-[400ms]"
     >
-      <h2>Recent Concerts</h2>
+      <h2 className={caveat.className}>Recent Concerts</h2>
       <ConcertsList concerts={sortedConcerts} />
     </section>
   );
@@ -53,10 +65,10 @@ const ConcertsList = ({ concerts }: { concerts: Concert[] }) => {
         (concert: Concert, index: number) => (
           <li
             key={index || concert.concertname}
-            className="motion-preset-blur-left-lg motion-delay-500 scrollbar-thin scrollbar-thumb-cflatyellow flex max-h-[36rem] w-full flex-col gap-3 overflow-y-scroll text-balance rounded-md p-6 transition-all duration-300 odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25"
+            className="scrollbar-thin scrollbar-thumb-cflatyellow motion-preset-blur-left-lg flex max-h-[36rem] w-full flex-col gap-3 overflow-y-scroll text-balance rounded-md p-6 transition-all duration-300 motion-delay-500 odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25"
           >
             <div className="border-b pb-1.5">
-              <h3 className="">{concert.concertname}</h3>
+              <h3 className={dancingScript.className}>{concert.concertname}</h3>
               <p className="text-slate-400">
                 {concert.semester} {concert.year}
               </p>
@@ -64,7 +76,7 @@ const ConcertsList = ({ concerts }: { concerts: Concert[] }) => {
             <ul className="flex flex-col gap-3">
               {concert.songs.map((song: Song, index: number) => (
                 <li key={index || song.title}>
-                  <h4>{song.title}</h4>
+                  <h4 className={caveat.className}>{song.title}</h4>
                   <p className="flex flex-col text-sm text-slate-400">
                     <span>opb. {song.opb}</span>
                     <span>arr. {song.arranger}</span>

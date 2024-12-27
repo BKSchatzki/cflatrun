@@ -1,18 +1,9 @@
 import './globals.css';
 
 import type { Metadata } from 'next';
-import {
-  Geist,
-  Geist_Mono,
-} from 'next/font/google';
+import { Urbanist } from 'next/font/google';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const montserrat = Urbanist({
   subsets: ['latin'],
 });
 
@@ -36,7 +27,7 @@ export default function RootLayout({
       lang="en"
       className="scroll-smooth"
     >
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+      <body className={`${montserrat.className} antialiased`}>{children}</body>
     </html>
   );
 }
