@@ -108,7 +108,7 @@ const MembersList = ({ members, image }: { members: Member[]; image: string }) =
           <img
             src={member.portrait || 'member-icon-default-round.webp'}
             alt={`Portrait of ${member.name}`}
-            className="size-[4.5rem] rounded-full"
+            className="size-[4.5rem] rounded-full object-cover"
           />
         </li>
       ))}
