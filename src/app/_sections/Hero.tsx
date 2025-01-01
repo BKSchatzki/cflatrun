@@ -24,7 +24,7 @@ interface HeroData {
   siteheading: string;
   sitesubheading: string;
   sitedescription: string;
-  sitelogo: string;
+  sitelogo?: string;
 }
 type Hero = HeroData;
 
@@ -35,7 +35,7 @@ const Hero = () => {
     <section className="motion-preset-blur-down-lg relative z-10 flex w-full flex-col gap-6 self-start text-balance rounded-2xl border-b-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-slate-800 p-6 pt-[3.75rem] motion-delay-100">
       <div className="flex gap-3 max-sm:flex-col sm:items-center">
         <img
-          src={heroData.sitelogo}
+          src={heroData.sitelogo || 'logo-default.webp'}
           alt="C Flat Run Logo"
           className="max-h-28 max-w-28 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-md hover:shadow-cflatyellow"
         />

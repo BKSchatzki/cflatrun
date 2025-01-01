@@ -8,19 +8,29 @@ import {
   UsersRound,
   Youtube,
 } from 'lucide-react';
-import {
-  Caveat,
-  Dancing_Script,
-} from 'next/font/google';
+import { Caveat } from 'next/font/google';
 import Link from 'next/link';
+import path from 'path';
 
 import ContactForm from '@/components/ContactForm';
+import { getDataFromFile } from '@/utils/graymatter';
+
+const heroPath = path.join(process.cwd(), 'src/content/sitecontent/hero.md');
+interface HeroData {
+  siteheading: string;
+  sitesubheading: string;
+  sitedescription: string;
+  sitelogo?: string;
+}
+type Hero = HeroData;
 
 const caveat = Caveat({
   subsets: ['latin'],
 });
 
 const Footer = () => {
+  const heroData: HeroData = getDataFromFile<HeroData>(heroPath);
+
   return (
     <div className="w-full max-w-[1280px] px-3 sm:px-6 md:px-12">
       <h2 className={`motion-preset-blur-right-lg motion-delay-500 ${caveat.className}`}>
@@ -34,7 +44,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col items-center gap-6 self-end">
             <img
-              src="/logo.png"
+              src={heroData.sitelogo || 'logo-default.wepb'}
               alt="C Flat Run Logo"
               className="max-h-20 max-w-20 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-md hover:shadow-cflatyellow"
             />
