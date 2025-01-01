@@ -2,7 +2,7 @@
 name: Caitlin Dempsey
 classof: "2026"
 voicepart: Alto
-position: Tech Director
+position: Tech & Social Media Chair
 bio: ""
 image: ""
 iscurrent: true
