@@ -39,7 +39,7 @@ const Concerts = () => {
   const allMusicData = getDataFromDirectory<ConcertData>(concertsDirectory);
   const sortedConcerts: Concert[] = allMusicData
     .sort((a: Concert, b: Concert) => +b.semester - +a.semester)
-    .sort((a: Concert, b: Concert) => a.year - b.year);
+    .sort((a: Concert, b: Concert) => b.year - a.year);
 
   return (
     <section

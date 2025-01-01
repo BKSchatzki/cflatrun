@@ -18,8 +18,8 @@ collections:
               label: 'Site Logo',
               name: 'sitelogo',
               widget: 'image',
-              choose_url: true,
               default: 'uploads/c-flat-logo-basic-op-1-01.webp',
+              required: false,
             }
   - label: 'Members'
     name: 'members'
@@ -41,6 +41,7 @@ collections:
       - { label: 'Class Of', name: 'classof', widget: 'number' }
       - { label: 'Voice Part', name: 'voicepart', widget: 'string' }
       - { label: 'Position', name: 'position', widget: 'string', required: false }
+      - { label: 'Portrait', name: 'portrait', widget: 'image', required: false }
       - { label: 'Is Current', name: 'iscurrent', widget: 'boolean', default: true }
   - label: 'Concerts'
     name: 'concerts'
