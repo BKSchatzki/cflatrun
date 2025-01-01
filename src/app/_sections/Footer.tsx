@@ -22,7 +22,6 @@ interface HeroData {
   sitedescription: string;
   sitelogo?: string;
 }
-type Hero = HeroData;
 
 const caveat = Caveat({
   subsets: ['latin'],

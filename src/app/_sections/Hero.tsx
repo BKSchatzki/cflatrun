@@ -26,7 +26,6 @@ interface HeroData {
   sitedescription: string;
   sitelogo?: string;
 }
-type Hero = HeroData;
 
 const Hero = () => {
   const heroData: HeroData = getDataFromFile<HeroData>(heroPath);
