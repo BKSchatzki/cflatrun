@@ -5,5 +5,6 @@ voicepart: Tenor
 position: Music Director
 bio: This guy did some stuff. He also made this website.
 image: ""
-iscurrent: false
+portrait: /uploads/c-flat-15-year-logo.webp
+iscurrent: true
 ---
