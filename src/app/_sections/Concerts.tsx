@@ -61,34 +61,32 @@ const ConcertsList = ({ concerts }: { concerts: Concert[] }) => {
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-1/2 -z-10 size-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-10 blur-sm"
       />
-      {[...concerts, ...concerts, ...concerts, ...concerts, ...concerts].map(
-        (concert: Concert, index: number) => (
-          <li
-            key={index || concert.concertname}
-            className="scrollbar-thin scrollbar-thumb-cflatyellow motion-preset-blur-left-lg flex max-h-[36rem] w-full flex-col gap-3 overflow-y-scroll text-balance rounded-md p-6 transition-all duration-300 motion-delay-500 odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25"
-          >
-            <div className="border-b pb-1.5">
-              <h3 className={dancingScript.className}>{concert.concertname}</h3>
-              <p className="text-slate-400">
-                {concert.semester} {concert.year}
-              </p>
-            </div>
-            <ul className="flex flex-col gap-3">
-              {concert.songs.map((song: Song, index: number) => (
-                <li key={index || song.title}>
-                  <h4 className={caveat.className}>{song.title}</h4>
-                  <p className="flex flex-col text-sm text-slate-400">
-                    <span>opb. {song.opb}</span>
-                    <span>arr. {song.arranger}</span>
-                    <span>{song.soloist && `solo. ${song.soloist}`}</span>
-                    <span>{song.vocalpercussion && `perc. ${song.vocalpercussion}`}</span>
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </li>
-        )
-      )}
+      {concerts.map((concert: Concert, index: number) => (
+        <li
+          key={index || concert.concertname}
+          className="scrollbar-thin scrollbar-thumb-cflatyellow motion-preset-blur-left-lg flex max-h-[36rem] w-full flex-col gap-3 overflow-y-scroll text-balance rounded-md p-6 transition-all duration-300 motion-delay-500 odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25"
+        >
+          <div className="border-b pb-1.5">
+            <h3 className={dancingScript.className}>{concert.concertname}</h3>
+            <p className="text-slate-400">
+              {concert.semester} {concert.year}
+            </p>
+          </div>
+          <ul className="flex flex-col gap-3">
+            {concert.songs.map((song: Song, index: number) => (
+              <li key={index || song.title}>
+                <h4 className={caveat.className}>{song.title}</h4>
+                <p className="flex flex-col text-sm text-slate-400">
+                  <span>opb. {song.opb}</span>
+                  <span>arr. {song.arranger}</span>
+                  <span>{song.soloist && `solo. ${song.soloist}`}</span>
+                  <span>{song.vocalpercussion && `perc. ${song.vocalpercussion}`}</span>
+                </p>
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))}
     </ul>
   );
 };
