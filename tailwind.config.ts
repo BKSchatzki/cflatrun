@@ -12,6 +12,7 @@ export default {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
         cflatblue: 'var(--cflatblue)',
+        cflatdarkblue: 'var(--cflatdarkblue)',
         cflatyellow: 'var(--cflatyellow)',
       },
     },

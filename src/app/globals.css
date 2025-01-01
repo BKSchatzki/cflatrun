@@ -5,8 +5,9 @@
 :root {
   --background: #020617;
   --foreground: #f8fafc;
-  --cflatblue: #012f85;
-  --cflatyellow: #fab802;
+  --cflatblue: #42577d;
+  --cflatdarkblue: #1f2a3c;
+  --cflatyellow: #edbe29;
   scrollbar-color: #1e293b #0f172a;
 }
 

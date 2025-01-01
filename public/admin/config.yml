@@ -19,7 +19,7 @@ collections:
               name: 'sitelogo',
               widget: 'image',
               choose_url: true,
-              default: 'uploads/c-flat-logo-basic-op-1-01.png',
+              default: 'uploads/c-flat-logo-basic-op-1-01.webp',
             }
   - label: 'Members'
     name: 'members'

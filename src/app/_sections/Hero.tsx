@@ -24,6 +24,7 @@ interface HeroData {
   siteheading: string;
   sitesubheading: string;
   sitedescription: string;
+  sitelogo: string;
 }
 type Hero = HeroData;
 
@@ -34,7 +35,7 @@ const Hero = () => {
     <section className="motion-preset-blur-down-lg relative z-10 flex w-full flex-col gap-6 self-start text-balance rounded-2xl border-b-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-slate-800 p-6 pt-[3.75rem] motion-delay-100">
       <div className="flex gap-3 max-sm:flex-col sm:items-center">
         <img
-          src="/logo.png"
+          src={heroData.sitelogo}
           alt="C Flat Run Logo"
           className="max-h-28 max-w-28 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-md hover:shadow-cflatyellow"
         />
@@ -63,7 +64,7 @@ const Hero = () => {
 
 const SocialLinks = () => {
   return (
-    <ul className="flex w-full justify-center gap-9 rounded-md border-4 border-cflatyellow bg-cflatblue px-3 py-1.5 text-cflatyellow ring-4 ring-cflatblue">
+    <ul className="flex w-full justify-center gap-9 rounded-md border-[3px] border-cflatyellow bg-cflatblue px-3 py-1.5 text-cflatyellow ring-4 ring-cflatdarkblue">
       <li>
         <a
           href="https://www.instagram.com/cflatrun/"
