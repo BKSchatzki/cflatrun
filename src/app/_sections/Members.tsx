@@ -34,6 +34,17 @@ const Members = () => {
     .filter((member: Member) => member.iscurrent)
     .sort((a: Member, b: Member) => +a.classof - +b.classof);
   const officers: Member[] = sortedCurrentMembers.filter((member: Member) => member.position);
+  const sortedOfficers: Member[] = officers.sort((a, b) => {
+    const priorityMap = {
+      president: 0,
+      'vice president': 1,
+      'music director': 2,
+      'assistant music director': 3,
+    };
+    const aPriority = priorityMap[a.position?.toLowerCase() as keyof typeof priorityMap] ?? 100;
+    const bPriority = priorityMap[b.position?.toLowerCase() as keyof typeof priorityMap] ?? 100;
+    return aPriority - bPriority;
+  });
   const nonOfficers: Member[] = sortedCurrentMembers.filter((member: Member) => !member.position);
 
   return (
@@ -43,7 +54,7 @@ const Members = () => {
     >
       <MembersSubsection
         heading="Officers"
-        members={officers}
+        members={sortedOfficers}
         image="/uploads/officers.png"
         delayDurationClass="motion-delay-200"
       />
