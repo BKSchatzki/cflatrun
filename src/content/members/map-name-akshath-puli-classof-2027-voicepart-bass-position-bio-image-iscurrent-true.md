@@ -2,7 +2,7 @@
 name: Akshath Puli
 classof: "2027"
 voicepart: Bass
-position: ""
+position: Treasurer
 bio: ""
 image: ""
 iscurrent: true
