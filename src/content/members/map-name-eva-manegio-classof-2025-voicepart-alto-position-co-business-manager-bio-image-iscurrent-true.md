@@ -5,5 +5,5 @@ voicepart: Alto
 position: Co-Business Manager
 bio: ""
 image: ""
-iscurrent: true
+iscurrent: false
 ---
