@@ -5,5 +5,5 @@ voicepart: Bass
 position: ""
 bio: ""
 image: ""
-iscurrent: true
+iscurrent: false
 ---
