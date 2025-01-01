@@ -47,6 +47,7 @@ collections:
     name: 'concerts'
     folder: 'src/content/concerts'
     create: true
+    sortable_fields: ['concertname', 'year']
     fields:
       - { label: 'Concert Name', name: 'concertname', widget: 'string' }
       - { label: 'Year', name: 'year', widget: 'number' }
