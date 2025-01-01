@@ -2,7 +2,7 @@
 name: Patrick Diamond
 classof: "2026"
 voicepart: Tenor
-position: Co-Business Manager
+position: ""
 bio: ""
 image: ""
 iscurrent: true
