@@ -2,7 +2,7 @@
 name: Jake Groff
 classof: "2026"
 voicepart: Bass
-position: Social Media & Alumni Relations Chair
+position: ""
 bio: ""
 image: ""
 iscurrent: true
