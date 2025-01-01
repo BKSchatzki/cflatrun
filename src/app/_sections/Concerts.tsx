@@ -64,7 +64,7 @@ const ConcertsList = ({ concerts }: { concerts: Concert[] }) => {
       {concerts.map((concert: Concert, index: number) => (
         <li
           key={index || concert.concertname}
-          className="scrollbar-thin scrollbar-thumb-cflatyellow motion-preset-blur-left-lg flex max-h-[36rem] w-full flex-col gap-3 overflow-y-scroll text-balance rounded-md p-6 transition-all duration-300 motion-delay-500 odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25"
+          className="scrollbar-thin scrollbar-thumb-cflatyellow motion-preset-blur-left-lg flex h-[36rem] w-full flex-col gap-3 overflow-y-scroll text-balance rounded-md p-6 transition-all duration-300 motion-delay-500 odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25"
         >
           <div className="border-b pb-1.5">
             <h3 className={dancingScript.className}>{concert.concertname}</h3>
