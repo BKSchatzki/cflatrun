@@ -5,5 +5,5 @@ voicepart: Soprano
 position: ""
 bio: ""
 image: ""
-iscurrent: true
+iscurrent: false
 ---
