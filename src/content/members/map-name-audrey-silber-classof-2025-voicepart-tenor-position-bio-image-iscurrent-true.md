@@ -1,7 +1,7 @@
 ---
 name: Audrey Silber
 classof: "2025"
-voicepart: Tenor
+voicepart: Alto
 position: ""
 bio: ""
 image: ""
