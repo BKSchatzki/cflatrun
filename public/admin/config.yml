@@ -14,6 +14,13 @@ collections:
           - { label: 'Site Heading', name: 'siteheading', widget: 'string' }
           - { label: 'Site Subheading', name: 'sitesubheading', widget: 'string' }
           - { label: 'Site Description', name: 'sitedescription', widget: 'text' }
+          - {
+              label: 'Site Logo',
+              name: 'sitelogo',
+              widget: 'image',
+              choose_url: true,
+              default: 'uploads/c-flat-logo-basic-op-1-01.png',
+            }
   - label: 'Members'
     name: 'members'
     folder: 'src/content/members'
