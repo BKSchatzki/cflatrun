@@ -103,7 +103,7 @@ const MembersList = ({ members, image }: { members: Member[]; image: string }) =
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-1/2 -z-10 size-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-10 blur-sm"
       />
-      {members.map((member: Member) => (
+      {members.map((member: Member, index: number) => (
         <li
           key={member.name}
           className={`motion-preset-blur-left-lg flex min-h-24 w-full justify-between text-balance rounded-md px-6 py-3 transition-all duration-300 motion-delay-[400ms] odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25`}
@@ -121,7 +121,7 @@ const MembersList = ({ members, image }: { members: Member[]; image: string }) =
           <img
             src={member.portrait || 'member-icon-default-round.webp'}
             alt={`Portrait of ${member.name}`}
-            className="size-[4.5rem] rounded-full object-cover"
+            className="motion-preset-blur-right-lg size-[4.5rem] rounded-full object-cover motion-delay-700"
           />
         </li>
       ))}
