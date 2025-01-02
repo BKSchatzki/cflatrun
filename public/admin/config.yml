@@ -7,7 +7,7 @@ collections:
   - label: 'Site Content'
     name: 'sitecontent'
     files:
-      - label: 'Hero'
+      - label: 'Hero Section'
         name: 'hero'
         file: 'src/content/sitecontent/hero.md'
         fields:
@@ -22,6 +22,79 @@ collections:
               required: false,
             }
           - { label: 'Hero Image', name: 'heroimage', widget: 'image', required: false }
+          - { label: 'Background Image', name: 'bgimage', widget: 'image', required: false }
+      - label: 'Officers Section'
+        name: 'officerssection'
+        file: 'src/content/sitecontent/officerssection.md'
+        fields:
+          - { label: 'Officers Heading', name: 'officersheading', widget: 'string' }
+          - {
+              label: 'Officers Subheading',
+              name: 'officerssubheading',
+              widget: 'string',
+              required: false,
+            }
+          - {
+              label: 'Officers Description',
+              name: 'officersdescription',
+              widget: 'text',
+              required: false,
+            }
+          - { label: 'Background Image', name: 'bgimage', widget: 'image', required: false }
+      - label: 'Members Section'
+        name: 'memberssection'
+        file: 'src/content/sitecontent/memberssection.md'
+        fields:
+          - { label: 'Members Heading', name: 'membersheading', widget: 'string' }
+          - {
+              label: 'Members Subheading',
+              name: 'memberssubheading',
+              widget: 'string',
+              required: false,
+            }
+          - {
+              label: 'Members Description',
+              name: 'membersdescription',
+              widget: 'text',
+              required: false,
+            }
+          - { label: 'Background Image', name: 'bgimage', widget: 'image', required: false }
+      - label: 'Concerts Section'
+        name: 'concertssection'
+        file: 'src/content/sitecontent/concertssection.md'
+        fields:
+          - { label: 'Concerts Heading', name: 'concertsheading', widget: 'string' }
+          - {
+              label: 'Concerts Subheading',
+              name: 'concertssubheading',
+              widget: 'string',
+              required: false,
+            }
+          - {
+              label: 'Concerts Description',
+              name: 'concertsdescription',
+              widget: 'text',
+              required: false,
+            }
+          - { label: 'Background Image', name: 'bgimage', widget: 'image', required: false }
+      - label: 'Contact Section'
+        name: 'contactsection'
+        file: 'src/content/sitecontent/contactsection.md'
+        fields:
+          - { label: 'Contact Heading', name: 'contactheading', widget: 'string' }
+          - {
+              label: 'Contact Subheading',
+              name: 'contactsubheading',
+              widget: 'string',
+              required: false,
+            }
+          - {
+              label: 'Contact Description',
+              name: 'contactdescription',
+              widget: 'text',
+              required: false,
+            }
+          - { label: 'Background Image', name: 'bgimage', widget: 'image', required: false }
   - label: 'Members'
     name: 'members'
     folder: 'src/content/members'
