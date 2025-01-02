@@ -8,7 +8,7 @@ import {
   UsersRound,
   Youtube,
 } from 'lucide-react';
-import { Caveat } from 'next/font/google';
+import { Merriweather } from 'next/font/google';
 import Link from 'next/link';
 import path from 'path';
 
@@ -23,8 +23,10 @@ interface HeroData {
   sitelogo?: string;
 }
 
-const caveat = Caveat({
+const merriweather = Merriweather({
+  style: ['normal', 'italic'],
   subsets: ['latin'],
+  weight: ['300', '400', '700', '900'],
 });
 
 const Footer = () => {
@@ -32,7 +34,7 @@ const Footer = () => {
 
   return (
     <div className="w-full max-w-[1280px] px-3 sm:px-6 md:px-12">
-      <h2 className={`motion-preset-blur-right-lg motion-delay-500 ${caveat.className}`}>
+      <h2 className={`motion-preset-blur-right-lg motion-delay-500 ${merriweather.className}`}>
         Contact Us
       </h2>
       <footer className="motion-preset-blur-up-lg relative z-10 flex w-full flex-col gap-6 self-start text-balance rounded-t-2xl border-t-2 border-cflatyellow bg-gradient-to-t from-slate-950 to-slate-800 p-6 pt-[3.75rem] motion-delay-500">

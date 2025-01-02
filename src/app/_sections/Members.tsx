@@ -1,24 +1,19 @@
 import React from 'react';
 
-import {
-  Caveat,
-  Dancing_Script,
-} from 'next/font/google';
+import { Merriweather } from 'next/font/google';
 import path from 'path';
 
 import { getDataFromDirectory } from '@/utils/graymatter';
 
 export const revalidate = 60;
 
-const dancingScript = Dancing_Script({
-  subsets: ['latin'],
-});
-
-const caveat = Caveat({
-  subsets: ['latin'],
-});
-
 const membersDirectory = path.join(process.cwd(), 'src/content/members');
+
+const merriweather = Merriweather({
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  weight: ['300', '400', '700', '900'],
+});
 
 interface MemberData {
   name: string;
@@ -85,7 +80,7 @@ const MembersSubsection = ({
     <div
       className={`motion-preset-blur-right-lg w-full rounded-md motion-delay-200 ${delayDurationClass}`}
     >
-      <h2 className={caveat.className}>{heading}</h2>
+      <h2 className={merriweather.className}>{heading}</h2>
       <MembersList
         members={members}
         image={image}
@@ -103,18 +98,18 @@ const MembersList = ({ members, image }: { members: Member[]; image: string }) =
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-1/2 -z-10 size-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-10 blur-sm"
       />
-      {members.map((member: Member, index: number) => (
+      {members.map((member: Member) => (
         <li
           key={member.name}
           className={`motion-preset-blur-left-lg flex min-h-24 w-full justify-between text-balance rounded-md px-6 py-3 transition-all duration-300 motion-delay-[400ms] odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25`}
         >
           <div className="flex flex-col">
-            <h3 className={`text-2xl ${dancingScript.className}`}>{member.name}</h3>
+            <h3 className={`text-2xl ${merriweather.className}`}>{member.name}</h3>
             <div className="flex flex-col pt-1 text-sm">
               <p className="text-sm text-slate-400">{member.position}</p>
               <p className="flex gap-2">
                 <span className="text-slate-400">{member.classof}</span>
-                <span className={caveat.className}>{member.voicepart}</span>
+                <span className={''}>{member.voicepart}</span>
               </p>
             </div>
           </div>

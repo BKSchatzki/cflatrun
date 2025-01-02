@@ -3,23 +3,18 @@ import {
   Instagram,
   Youtube,
 } from 'lucide-react';
-import {
-  Caveat,
-  Dancing_Script,
-} from 'next/font/google';
+import { Merriweather } from 'next/font/google';
 import path from 'path';
 
 import { getDataFromFile } from '@/utils/graymatter';
 
-const dancingScript = Dancing_Script({
-  subsets: ['latin'],
-});
-
-const caveat = Caveat({
-  subsets: ['latin'],
-});
-
 const heroPath = path.join(process.cwd(), 'src/content/sitecontent/hero.md');
+
+const merriweather = Merriweather({
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  weight: ['300', '400', '700', '900'],
+});
 interface HeroData {
   siteheading: string;
   sitesubheading: string;
@@ -38,7 +33,7 @@ const Hero = () => {
           alt="C Flat Run Logo"
           className="max-h-28 max-w-28 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-md hover:shadow-cflatyellow"
         />
-        <div className={`w-fit space-y-3 ${dancingScript.className}`}>
+        <div className={`w-fit space-y-3 ${merriweather.className}`}>
           <h1 className="bg-gradient-to-r from-cflatyellow to-amber-300 bg-clip-text text-transparent">
             {heroData.siteheading}
           </h1>
@@ -46,7 +41,7 @@ const Hero = () => {
         </div>
       </div>
       <h3
-        className={`${caveat.className} bg-gradient-to-r from-amber-300 to-cflatyellow bg-clip-text text-transparent`}
+        className={`${merriweather.className} bg-gradient-to-r from-amber-300 to-cflatyellow bg-clip-text text-transparent`}
       >
         {heroData.sitesubheading}
       </h3>
