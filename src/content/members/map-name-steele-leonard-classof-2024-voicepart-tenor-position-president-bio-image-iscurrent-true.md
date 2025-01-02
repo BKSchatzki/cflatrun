@@ -5,5 +5,6 @@ voicepart: Bass
 position: Music Director
 bio: ""
 image: ""
+portrait: /uploads/zcoleman.webp
 iscurrent: true
 ---
