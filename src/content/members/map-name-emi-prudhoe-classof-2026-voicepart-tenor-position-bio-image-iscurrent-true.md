@@ -5,5 +5,6 @@ voicepart: Tenor
 position: Assistant Music Director
 bio: ""
 image: ""
+portrait: /uploads/eprudhoe.webp
 iscurrent: true
 ---
