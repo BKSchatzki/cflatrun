@@ -1,33 +1,36 @@
-# C Flat Run
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A landing page for a university a cappella group. Plans for a full redesign, refactor, and implementation of a dashboard allowing group admins to modify site content.
+## Getting Started
 
-**Link to project:** http://cflatrun.com
+First, run the development server:
 
-![C Flat Run](https://res.cloudinary.com/djqsm7sz5/image/upload/v1691468692/bks-portfolio/cflatrun-landingpage_qol3oj.jpg)
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## How It's Made:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-**Tech used:** HTML, CSS, JavaScript
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Straight-up raw base technologies with CSS preprocessors. This uses a lightly-edited template and is a true website in the traditional sense. The template is a bit of a monster though, so the time spent making this was divided fairly evenly between editing the markup and searching through large CSS files.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Optimizations
+## Learn More
 
-Honestly, there isn't a lot I would change before the full redesign and refactor. I already removed a lot of boilerplate files and unused CSS rules, but there's definitely a lot of stuff in there that remains. I had to play with the tables a lot to make them behave and change some list styling from the original template.
+To learn more about Next.js, take a look at the following resources:
 
-## Lessons Learned:
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-This was literally harder than building something from scratch. So the takeaway was mainly just practice for combing through existing code that is very different from how I'd write things. It was a good exercise in mentally building out what will go into the dashboard I'd like to make long term.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Examples:
+## Deploy on Vercel
 
-Take a look at some more examples in my portfolio:
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-**BK Chat:** https://github.com/BKSchatzki/bk-chat
-
-**Nick B. Schatzki:** https://github.com/BKSchatzki/nbs-portfolio
-
-**Songstruct:** https://github.com/BKSchatzki/songstruct
-
-**SongStrudel:** https://github.com/BKSchatzki/songstrudel
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

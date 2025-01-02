@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #020617;
+  --foreground: #f8fafc;
+  --cflatblue: #42577d;
+  --cflatdarkblue: #1f2a3c;
+  --cflatyellow: #edbe29;
+  scrollbar-color: #1e293b #0f172a;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+@layer base {
+  h1 {
+    @apply scroll-m-20 text-5xl font-extrabold tracking-tight lg:text-5xl;
+  }
+  h2 {
+    @apply w-full scroll-m-20 border-amber-300 bg-gradient-to-r from-cflatyellow to-amber-300 bg-clip-text pb-3 ps-6 text-start text-4xl font-semibold tracking-tight text-transparent first:mt-0;
+  }
+  h3 {
+    @apply scroll-m-20 text-3xl font-semibold tracking-tight;
+  }
+  h4 {
+    @apply scroll-m-20 text-2xl font-semibold tracking-tight;
+  }
+  ::selection {
+    @apply bg-cflatyellow text-background;
+  }
+}
+
+.bg-dots {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='16' height='16' fill='none'%3E%3Ccircle fill='%23f8fafc31' id='pattern-circle' cx='10' cy='10' r='1.6257413380501518'%3E%3C/circle%3E%3C/svg%3E");
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thumb-cflatyellow {
+  scrollbar-color: var(--cflatyellow) var(--background);
+}

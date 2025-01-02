@@ -1,0 +1,74 @@
+backend:
+  name: git-gateway
+  branch: next
+media_folder: 'public/uploads'
+public_folder: '/uploads'
+collections:
+  - label: 'Site Content'
+    name: 'sitecontent'
+    files:
+      - label: 'Hero'
+        name: 'hero'
+        file: 'src/content/sitecontent/hero.md'
+        fields:
+          - { label: 'Site Heading', name: 'siteheading', widget: 'string' }
+          - { label: 'Site Subheading', name: 'sitesubheading', widget: 'string' }
+          - { label: 'Site Description', name: 'sitedescription', widget: 'text' }
+          - {
+              label: 'Site Logo',
+              name: 'sitelogo',
+              widget: 'image',
+              default: 'uploads/c-flat-logo-basic-op-1-01.webp',
+              required: false,
+            }
+  - label: 'Members'
+    name: 'members'
+    folder: 'src/content/members'
+    create: true
+    sortable_fields: ['name', 'classof', 'voicepart', 'position', 'iscurrent']
+    view_filters:
+      - label: 'Current Members'
+        field: 'iscurrent'
+        pattern: 'true'
+      - label: 'Past Members'
+        field: 'iscurrent'
+        pattern: 'false'
+      - label: 'Officers'
+        field: 'position'
+        pattern: '(.|\s)*\S(.|\s)*'
+    fields:
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Class Of', name: 'classof', widget: 'number' }
+      - { label: 'Voice Part', name: 'voicepart', widget: 'string' }
+      - { label: 'Position', name: 'position', widget: 'string', required: false }
+      - { label: 'Portrait', name: 'portrait', widget: 'image', required: false }
+      - { label: 'Is Current', name: 'iscurrent', widget: 'boolean', default: true }
+  - label: 'Concerts'
+    name: 'concerts'
+    folder: 'src/content/concerts'
+    create: true
+    sortable_fields: ['concertname', 'year']
+    fields:
+      - { label: 'Concert Name', name: 'concertname', widget: 'string' }
+      - { label: 'Year', name: 'year', widget: 'number' }
+      - {
+          label: 'Semester',
+          name: 'semester',
+          widget: 'select',
+          options: ['Spring', 'Fall'],
+          default: '',
+        }
+      - label: 'Songs'
+        name: 'songs'
+        widget: 'list'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'OPB', name: 'opb', widget: 'string' }
+          - { label: 'Arranger', name: 'arranger', widget: 'string' }
+          - { label: 'Soloist', name: 'soloist', widget: 'string', required: false }
+          - {
+              label: 'Vocal Percussion',
+              name: 'vocalpercussion',
+              widget: 'string',
+              required: false,
+            }
