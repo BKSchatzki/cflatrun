@@ -5,5 +5,6 @@ voicepart: Bass
 position: ""
 bio: ""
 image: ""
+portrait: /uploads/jgroff.webp
 iscurrent: true
 ---
