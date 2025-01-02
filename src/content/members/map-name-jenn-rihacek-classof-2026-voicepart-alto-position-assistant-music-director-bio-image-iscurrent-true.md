@@ -5,5 +5,6 @@ voicepart: Alto
 position: President
 bio: ""
 image: ""
+portrait: /uploads/jrihacek.webp
 iscurrent: true
 ---
