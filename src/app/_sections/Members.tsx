@@ -3,11 +3,16 @@ import React from 'react';
 import { Merriweather } from 'next/font/google';
 import path from 'path';
 
-import { getDataFromDirectory } from '@/utils/graymatter';
+import {
+  getDataFromDirectory,
+  getDataFromFile,
+} from '@/utils/graymatter';
 
 export const revalidate = 60;
 
 const membersDirectory = path.join(process.cwd(), 'src/content/members');
+const officersPath = path.join(process.cwd(), 'src/content/sitecontent/officerssection.md');
+const membersPath = path.join(process.cwd(), 'src/content/sitecontent/memberssection.md');
 
 const merriweather = Merriweather({
   style: ['normal', 'italic'],
@@ -18,6 +23,7 @@ const merriweather = Merriweather({
 interface MemberData {
   name: string;
   classof: string;
+  major?: string;
   voicepart: string;
   position?: string;
   portrait?: string;
@@ -25,7 +31,24 @@ interface MemberData {
 }
 type Member = MemberData;
 
+interface OfficersSection {
+  officersheading: string;
+  officerssubheading?: string;
+  officersdescription?: string;
+  bgimage?: string;
+}
+
+interface MembersSection {
+  membersheading: string;
+  memberssubheading?: string;
+  membersdescription?: string;
+  bgimage?: string;
+}
+
 const Members = () => {
+  const officersSection: OfficersSection = getDataFromFile<OfficersSection>(officersPath);
+  const membersSection: MembersSection = getDataFromFile<MembersSection>(membersPath);
+
   const allMembersData = getDataFromDirectory<MemberData>(membersDirectory);
   const sortedCurrentMembers: Member[] = allMembersData
     .filter((member: Member) => member.iscurrent)
@@ -50,15 +73,15 @@ const Members = () => {
       className="flex w-full scroll-m-16 flex-col items-center gap-3"
     >
       <MembersSubsection
-        heading="Officers"
+        heading={officersSection.officersheading}
         members={sortedOfficers}
-        image="uploads/officers.png"
+        image={officersSection.bgimage || 'uploads/officers.png'}
         delayDurationClass="motion-delay-200"
       />
       <MembersSubsection
-        heading="Members"
+        heading={membersSection.membersheading}
         members={nonOfficers}
-        image="uploads/outside-union.png"
+        image={membersSection.bgimage || 'uploads/outside-union.png'}
         delayDurationClass="motion-delay-300"
       />
     </section>

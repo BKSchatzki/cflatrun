@@ -21,6 +21,7 @@ interface HeroData {
   sitedescription: string;
   sitelogo?: string;
   heroimage?: string;
+  bgimage?: string;
 }
 
 const Hero = () => {
@@ -55,7 +56,7 @@ const Hero = () => {
         className="rounded-xl border-[9px] border-cflatdarkblue object-cover sm:max-w-[32rem] lg:max-w-[50%]"
       />
       <img
-        src="uploads/fuel-and-fuddle.png"
+        src={heroData.bgimage || 'uploads/fuel-and-fuddle.png'}
         alt=""
         aria-hidden="true"
         className="motion pointer-events-none absolute left-1/2 top-1/2 -z-10 size-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-10 blur-sm"

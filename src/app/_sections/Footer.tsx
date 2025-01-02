@@ -16,11 +16,20 @@ import ContactForm from '@/components/ContactForm';
 import { getDataFromFile } from '@/utils/graymatter';
 
 const heroPath = path.join(process.cwd(), 'src/content/sitecontent/hero.md');
+const contactPath = path.join(process.cwd(), 'src/content/sitecontent/contactsection.md');
+
 interface HeroData {
   siteheading: string;
   sitesubheading: string;
   sitedescription: string;
   sitelogo?: string;
+}
+
+interface ContactSection {
+  contactheading: string;
+  contactsubheading?: string;
+  contactdescription?: string;
+  bgimage?: string;
 }
 
 const merriweather = Merriweather({
@@ -31,16 +40,16 @@ const merriweather = Merriweather({
 
 const Footer = () => {
   const heroData: HeroData = getDataFromFile<HeroData>(heroPath);
+  const contactSection: ContactSection = getDataFromFile<ContactSection>(contactPath);
 
   return (
     <div className="w-full max-w-[1280px] px-3 sm:px-6 md:px-12">
       <h2 className={`motion-preset-blur-right-lg motion-delay-500 ${merriweather.className}`}>
-        Contact Us
+        {contactSection.contactheading}
       </h2>
       <footer className="motion-preset-blur-up-lg relative z-10 flex w-full flex-col gap-6 self-start text-balance rounded-t-2xl border-t-2 border-cflatyellow bg-gradient-to-t from-slate-950 to-slate-800 p-6 pt-[3.75rem] motion-delay-500">
         <div className="grid max-w-[1280px] grid-cols-1 justify-end gap-9 px-3 py-6 sm:grid-cols-2 sm:px-6 md:px-12">
           <div>
-            <h2 className="sr-only">Contact Us</h2>
             <ContactForm />
           </div>
           <div className="flex flex-col items-center gap-6 self-end">
@@ -82,7 +91,7 @@ const Footer = () => {
           </div>
         </div>
         <img
-          src="uploads/orchard.png"
+          src={contactSection.bgimage || 'uploads/orchard.png'}
           alt=""
           aria-hidden="true"
           className="pointer-events-none absolute left-1/2 top-1/2 -z-10 size-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-10 blur-sm"
