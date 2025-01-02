@@ -91,7 +91,7 @@ const MembersSubsection = ({
 
 const MembersList = ({ members, image }: { members: Member[]; image: string }) => {
   return (
-    <ul className="relative z-10 grid w-full max-w-[1280px] grid-cols-1 place-items-center gap-3 rounded-t-none border-t-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-indigo-950 p-3 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="relative z-10 grid w-full max-w-[1280px] grid-cols-1 place-items-center gap-3 rounded-t-none border-t-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-indigo-950 p-3 max-sm:px-1.5 sm:grid-cols-2 lg:grid-cols-3">
       <img
         src={image}
         alt=""
@@ -101,7 +101,7 @@ const MembersList = ({ members, image }: { members: Member[]; image: string }) =
       {members.map((member: Member) => (
         <li
           key={member.name}
-          className={`motion-preset-blur-left-lg flex h-full min-h-24 w-full justify-between gap-2 text-balance rounded-md px-6 py-3 transition-all duration-300 motion-delay-[400ms] odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25`}
+          className={`motion-preset-blur-left-lg flex h-full min-h-24 w-full justify-between gap-2 text-balance rounded-md px-6 py-3 transition-all duration-300 motion-delay-[400ms] odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25 max-sm:px-3`}
         >
           <div className="flex flex-col gap-2">
             <div>

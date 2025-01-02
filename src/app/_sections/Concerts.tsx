@@ -49,7 +49,7 @@ const Concerts = () => {
 
 const ConcertsList = ({ concerts }: { concerts: Concert[] }) => {
   return (
-    <ul className="relative z-10 grid w-full max-w-[1280px] grid-cols-1 place-items-center gap-3 border-t-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-yellow-950 p-3 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="relative z-10 grid w-full max-w-[1280px] grid-cols-1 place-items-center gap-3 border-t-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-yellow-950 p-3 max-sm:px-1.5 sm:grid-cols-2 lg:grid-cols-3">
       <img
         src="uploads/suspenders-concert.png"
         alt=""
@@ -59,7 +59,7 @@ const ConcertsList = ({ concerts }: { concerts: Concert[] }) => {
       {concerts.map((concert: Concert, index: number) => (
         <li
           key={index || concert.concertname}
-          className="scrollbar-thin scrollbar-thumb-cflatyellow motion-preset-blur-left-lg flex h-[36rem] w-full flex-col gap-3 overflow-y-scroll text-balance rounded-md p-6 transition-all duration-300 motion-delay-500 odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25"
+          className="scrollbar-thin scrollbar-thumb-cflatyellow motion-preset-blur-left-lg flex h-[36rem] w-full flex-col gap-3 overflow-y-scroll text-balance rounded-md px-6 py-3 transition-all duration-300 motion-delay-500 odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25 max-sm:px-3"
         >
           <div className="border-b pb-1.5">
             <h3 className={merriweather.className}>{concert.concertname}</h3>
