@@ -8,6 +8,8 @@ import path from 'path';
 
 import { getDataFromDirectory } from '@/utils/graymatter';
 
+export const revalidate = 60;
+
 const dancingScript = Dancing_Script({
   subsets: ['latin'],
 });
