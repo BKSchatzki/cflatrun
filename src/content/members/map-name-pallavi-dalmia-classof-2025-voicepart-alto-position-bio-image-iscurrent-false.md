@@ -5,6 +5,6 @@ voicepart: Alto
 position: ""
 bio: ""
 image: ""
-portrait: /uploads/pdalmia.webp
+portrait: ""
 iscurrent: true
 ---
