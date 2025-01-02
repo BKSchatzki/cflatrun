@@ -101,22 +101,25 @@ const MembersList = ({ members, image }: { members: Member[]; image: string }) =
       {members.map((member: Member) => (
         <li
           key={member.name}
-          className={`motion-preset-blur-left-lg flex min-h-24 w-full justify-between text-balance rounded-md px-6 py-3 transition-all duration-300 motion-delay-[400ms] odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25`}
+          className={`motion-preset-blur-left-lg flex h-full min-h-24 w-full justify-between gap-2 text-balance rounded-md px-6 py-3 transition-all duration-300 motion-delay-[400ms] odd:bg-slate-800/25 even:bg-slate-950/25 hover:odd:-rotate-1 hover:odd:bg-slate-950/25 hover:even:rotate-1 hover:even:bg-slate-800/25`}
         >
-          <div className="flex flex-col">
-            <h3 className={`text-2xl ${merriweather.className}`}>{member.name}</h3>
-            <div className="flex flex-col pt-1 text-sm">
-              <p className="text-sm text-slate-400">{member.position}</p>
+          <div className="flex flex-col gap-2">
+            <div>
+              <h3 className={`text-2xl ${merriweather.className}`}>{member.name}</h3>
+              <p className="text-sm">{member.position}</p>
+            </div>
+            <div className="flex flex-col text-sm">
+              <p className="text-slate-400">{member.voicepart}</p>
               <p className="flex gap-2">
                 <span className="text-slate-400">{member.classof}</span>
-                <span className={''}>{member.voicepart}</span>
+                <span className="text-slate-400">{member.major || 'Undecided'}</span>
               </p>
             </div>
           </div>
           <img
             src={member.portrait || 'member-icon-default-round.webp'}
             alt={`Portrait of ${member.name}`}
-            className="motion-preset-blur-right-lg size-[4.5rem] rounded-full object-cover motion-delay-700"
+            className="motion-preset-blur-right-lg size-28 rounded-full border-8 border-cflatdarkblue object-cover motion-delay-700"
           />
         </li>
       ))}
