@@ -5,5 +5,6 @@ voicepart: Tenor
 position: ""
 bio: ""
 image: ""
+portrait: /uploads/pdiamond.webp
 iscurrent: true
 ---
