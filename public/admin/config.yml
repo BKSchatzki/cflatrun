@@ -21,6 +21,7 @@ collections:
               default: 'uploads/c-flat-logo-basic-op-1-01.webp',
               required: false,
             }
+          - { label: 'Hero Image', name: 'heroimage', widget: 'image', required: false }
   - label: 'Members'
     name: 'members'
     folder: 'src/content/members'

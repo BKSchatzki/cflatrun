@@ -52,13 +52,13 @@ const Members = () => {
       <MembersSubsection
         heading="Officers"
         members={sortedOfficers}
-        image="/uploads/officers.png"
+        image="uploads/officers.png"
         delayDurationClass="motion-delay-200"
       />
       <MembersSubsection
         heading="Members"
         members={nonOfficers}
-        image="/uploads/outside-union.png"
+        image="uploads/outside-union.png"
         delayDurationClass="motion-delay-300"
       />
     </section>
@@ -119,7 +119,7 @@ const MembersList = ({ members, image }: { members: Member[]; image: string }) =
           <img
             src={member.portrait || 'member-icon-default-round.webp'}
             alt={`Portrait of ${member.name}`}
-            className="motion-preset-blur-right-lg size-28 rounded-full border-8 border-cflatdarkblue object-cover motion-delay-700"
+            className="motion-preset-blur-right-lg size-28 rounded-full border-[9px] border-cflatdarkblue object-cover motion-delay-700"
           />
         </li>
       ))}
