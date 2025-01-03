@@ -1,8 +1,11 @@
 'use client';
 
-import * as React from 'react';
-import { useState } from 'react';
+import {
+  useEffect,
+  useState,
+} from 'react';
 
+import Cookies from 'js-cookie';
 import {
   Disc3,
   Mail,
@@ -46,6 +49,31 @@ const Contact = () => {
       message: '',
     },
   });
+  const reset = form.reset;
+
+  useEffect(() => {
+    const savedData = Cookies.get('cfrFormData');
+    if (savedData) {
+      try {
+        const parsedData = JSON.parse(savedData);
+        reset(parsedData);
+      } catch {
+        console.warn('Failed to parse form data from cookies');
+      }
+    }
+  }, [reset]);
+
+  let debounceTimer: NodeJS.Timeout | null = null;
+
+  const handleSaveToCookies = () => {
+    if (debounceTimer) {
+      clearTimeout(debounceTimer);
+    }
+    debounceTimer = setTimeout(() => {
+      const currentData = form.getValues();
+      Cookies.set('cfrFormData', JSON.stringify(currentData), { expires: 1 });
+    }, 1000);
+  };
 
   const handleFormSubmission = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
@@ -62,7 +90,8 @@ const Contact = () => {
       });
       if (res.ok) {
         setSubmitIsSuccessful(true);
-        form.reset();
+        reset();
+        Cookies.remove('cfrFormData');
       } else {
         setSubmitIsFailed(true);
         console.error('Form submission failed: ', res.statusText);
@@ -78,6 +107,7 @@ const Contact = () => {
     <FormProvider {...form}>
       <form
         name="contact"
+        onChange={handleSaveToCookies}
         onSubmit={form.handleSubmit(handleFormSubmission)}
         data-netlify="true"
         className="relative z-10 col-start-1 flex w-full flex-col gap-8 self-end"

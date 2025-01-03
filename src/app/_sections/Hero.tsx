@@ -3,56 +3,60 @@ import {
   Instagram,
   Youtube,
 } from 'lucide-react';
-import {
-  Caveat,
-  Dancing_Script,
-} from 'next/font/google';
+import { Merriweather } from 'next/font/google';
 import path from 'path';
 
 import { getDataFromFile } from '@/utils/graymatter';
 
-const dancingScript = Dancing_Script({
-  subsets: ['latin'],
-});
-
-const caveat = Caveat({
-  subsets: ['latin'],
-});
-
 const heroPath = path.join(process.cwd(), 'src/content/sitecontent/hero.md');
+
+const merriweather = Merriweather({
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  weight: ['300', '400', '700', '900'],
+});
 interface HeroData {
   siteheading: string;
   sitesubheading: string;
   sitedescription: string;
   sitelogo?: string;
+  heroimage?: string;
+  bgimage?: string;
 }
 
 const Hero = () => {
   const heroData: HeroData = getDataFromFile<HeroData>(heroPath);
 
   return (
-    <section className="motion-preset-blur-down-lg relative z-10 flex w-full flex-col gap-6 self-start text-balance rounded-2xl border-b-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-slate-800 p-6 pt-[3.75rem] motion-delay-100">
-      <div className="flex gap-3 max-sm:flex-col sm:items-center">
-        <img
-          src={heroData.sitelogo || 'logo-default.webp'}
-          alt="C Flat Run Logo"
-          className="max-h-28 max-w-28 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-md hover:shadow-cflatyellow"
-        />
-        <div className={`w-fit space-y-3 ${dancingScript.className}`}>
-          <h1 className="bg-gradient-to-r from-cflatyellow to-amber-300 bg-clip-text text-transparent">
-            {heroData.siteheading}
-          </h1>
-          <SocialLinks />
+    <section className="motion-preset-blur-down-lg relative z-10 flex w-full justify-between gap-6 text-balance rounded-2xl border-b-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-slate-800 p-3 pt-[3.75rem] motion-delay-100 max-lg:flex-col sm:p-6">
+      <div className="flex flex-col gap-6 max-sm:items-center max-sm:text-center">
+        <div className="flex items-center gap-3 max-sm:flex-col">
+          <img
+            src={heroData.sitelogo || 'logo-default.webp'}
+            alt="C Flat Run Logo"
+            className="max-h-28 max-w-28 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-md hover:shadow-cflatyellow"
+          />
+          <div className={`w-fit space-y-3 ${merriweather.className}`}>
+            <h1 className="bg-gradient-to-r from-cflatyellow to-amber-300 bg-clip-text text-transparent">
+              {heroData.siteheading}
+            </h1>
+            <SocialLinks />
+          </div>
         </div>
+        <h3
+          className={`${merriweather.className} bg-gradient-to-r from-amber-300 to-cflatyellow bg-clip-text text-transparent max-xl:text-2xl`}
+        >
+          {heroData.sitesubheading}
+        </h3>
+        <p className="max-w-md">{heroData.sitedescription}</p>
       </div>
-      <h3
-        className={`${caveat.className} bg-gradient-to-r from-amber-300 to-cflatyellow bg-clip-text text-transparent`}
-      >
-        {heroData.sitesubheading}
-      </h3>
-      <p className="max-w-md">{heroData.sitedescription}</p>
       <img
-        src="/uploads/fuel-and-fuddle.png"
+        src={heroData.heroimage || 'uploads/fuel-and-fuddle.png'}
+        alt=""
+        className="rounded-xl border-[9px] border-cflatdarkblue object-cover sm:max-w-[32rem] lg:max-w-[50%]"
+      />
+      <img
+        src={heroData.bgimage || 'uploads/fuel-and-fuddle.png'}
         alt=""
         aria-hidden="true"
         className="motion pointer-events-none absolute left-1/2 top-1/2 -z-10 size-full -translate-x-1/2 -translate-y-1/2 object-cover opacity-10 blur-sm"

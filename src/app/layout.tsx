@@ -1,10 +1,12 @@
 import './globals.css';
 
 import type { Metadata } from 'next';
-import { Urbanist } from 'next/font/google';
+import { Plus_Jakarta_Sans } from 'next/font/google';
 
-const montserrat = Urbanist({
+const jakarta = Plus_Jakarta_Sans({
+  style: ['normal', 'italic'],
   subsets: ['latin'],
+  weight: 'variable',
 });
 
 export const metadata: Metadata = {
@@ -27,7 +29,7 @@ export default function RootLayout({
       lang="en"
       className="scroll-smooth"
     >
-      <body className={`${montserrat.className} antialiased`}>{children}</body>
+      <body className={`${jakarta.className} antialiased`}>{children}</body>
     </html>
   );
 }
