@@ -1,4 +1,4 @@
 ---
 officersheading: Officers
-bgimage: /uploads/officers.png
+bgimage: ""
 ---
