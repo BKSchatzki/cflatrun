@@ -37,7 +37,7 @@ const PhotoCarousel = ({ gallerySection }: { gallerySection: GallerySection }) =
           >
             <img
               src={image.galleryimage}
-              alt={image.imagecaption}
+              alt={image.imagecaption || 'C Flat Run Gallery Image'}
               className="peer h-full rounded-xl border-[9px] border-cflatdarkblue object-cover transition-all"
             />
             {image.imagecaption.trim() && (
