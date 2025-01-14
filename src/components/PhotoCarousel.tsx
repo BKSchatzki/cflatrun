@@ -33,7 +33,7 @@ const PhotoCarousel = ({ gallerySection }: { gallerySection: GallerySection }) =
         {gallerypictures.map((image, index) => (
           <figure
             key={index}
-            className="relative min-w-0 max-w-full shrink-0 basis-auto rounded-md px-1.5 md:max-w-[67%]"
+            className="relative min-w-0 shrink-0 basis-auto rounded-md px-1.5 md:max-w-[67%]"
           >
             <img
               src={image.galleryimage}
