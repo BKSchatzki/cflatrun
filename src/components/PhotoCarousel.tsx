@@ -40,9 +40,11 @@ const PhotoCarousel = ({ gallerySection }: { gallerySection: GallerySection }) =
               alt={image.imagecaption}
               className="peer h-full rounded-xl border-[9px] border-cflatdarkblue object-cover transition-all"
             />
-            <figcaption className="absolute left-0 top-0 hidden h-full w-full cursor-default select-none items-center justify-center text-balance bg-slate-950/75 backdrop-blur-sm transition-all hover:flex peer-hover:flex">
-              {image.imagecaption}
-            </figcaption>
+            {image.imagecaption.trim() && (
+              <figcaption className="absolute left-0 top-0 hidden h-full w-full cursor-default select-none items-center justify-center text-balance bg-slate-950/75 backdrop-blur-sm transition-all hover:flex peer-hover:flex">
+                {image.imagecaption}
+              </figcaption>
+            )}
           </figure>
         ))}
       </div>
