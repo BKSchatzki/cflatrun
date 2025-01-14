@@ -133,6 +133,34 @@ collections:
               media_library: { config: { max_file_size: 2048000 } },
               required: false,
             }
+      - label: 'Gallery Section'
+        name: 'gallerysection'
+        file: 'src/content/sitecontent/gallerysection.md'
+        fields:
+          - { label: 'Gallery Heading', name: 'galleryheading', widget: 'string' }
+          - {
+              label: 'Gallery Subheading',
+              name: 'gallerysubheading',
+              widget: 'string',
+              required: false,
+            }
+          - {
+              label: 'Gallery Description',
+              name: 'gallerydescription',
+              widget: 'string',
+              required: false,
+            }
+          - label: 'Gallery Pictures'
+            name: 'gallerypictures'
+            widget: 'list'
+            fields:
+              - {
+                  label: 'Gallery Image',
+                  name: 'galleryimage',
+                  widget: 'image',
+                  media_library: { config: { max_file_size: 2048000 } },
+                }
+              - { label: 'Image Caption', name: 'imagecaption', widget: 'string', required: false }
   - label: 'Members'
     name: 'members'
     folder: 'src/content/members'
