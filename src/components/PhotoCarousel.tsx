@@ -38,9 +38,9 @@ const PhotoCarousel = ({ gallerySection }: { gallerySection: GallerySection }) =
             <img
               src={image.galleryimage}
               alt={image.imagecaption || 'C Flat Run Gallery Image'}
-              className="peer h-full rounded-xl border-[9px] border-cflatdarkblue object-cover transition-all"
+              className="peer h-full max-h-80 rounded-xl border-[9px] border-cflatdarkblue object-cover transition-all"
             />
-            {image.imagecaption.trim() && (
+            {image.imagecaption.trim() !== '' && (
               <figcaption className="absolute left-0 top-0 hidden h-full w-full cursor-default select-none items-center justify-center text-balance bg-slate-950/75 backdrop-blur-sm transition-all hover:flex peer-hover:flex">
                 {image.imagecaption}
               </figcaption>
