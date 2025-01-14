@@ -2,24 +2,48 @@
 
 import React from 'react';
 
+import AutoScroll from 'embla-carousel-auto-scroll';
 import useEmblaCarousel from 'embla-carousel-react';
 
-import type { Image } from '@/app/_sections/Gallery';
+import { GallerySection } from '@/app/_sections/Gallery';
 
-const PhotoCarousel = ({ data }: { data: Image[] }) => {
-  const [emblaRef] = useEmblaCarousel();
+const PhotoCarousel = ({ gallerySection }: { gallerySection: GallerySection }) => {
+  const [emblaRef] = useEmblaCarousel(
+    {
+      dragFree: true,
+      loop: true,
+    },
+    [
+      AutoScroll({
+        speed: 1,
+        startDelay: 0,
+        stopOnInteraction: false,
+        stopOnMouseEnter: true,
+      }),
+    ]
+  );
+  const { gallerypictures } = gallerySection;
 
   return (
     <div
-      className="h-full w-full overflow-hidden bg-red-500"
+      className="relative h-full w-full overflow-hidden from-transparent to-slate-950"
       ref={emblaRef}
     >
-      <div className="flex border-t-2 border-cflatyellow *:min-w-0 *:shrink-0 *:basis-full">
-        {data.map((image) => (
-          <img
-            src={data.galleryimage}
-            alt={data.imagecaption}
-          />
+      <div className="flex">
+        {gallerypictures.map((image, index) => (
+          <figure
+            key={index}
+            className="relative min-w-0 max-w-full shrink-0 basis-auto rounded-md px-1.5 md:max-w-[67%]"
+          >
+            <img
+              src={image.galleryimage}
+              alt={image.imagecaption}
+              className="peer h-full rounded-xl border-[9px] border-cflatdarkblue object-cover transition-all"
+            />
+            <figcaption className="absolute left-0 top-0 hidden h-full w-full cursor-default select-none items-center justify-center text-balance bg-slate-950/75 backdrop-blur-sm transition-all hover:flex peer-hover:flex">
+              {image.imagecaption}
+            </figcaption>
+          </figure>
         ))}
       </div>
     </div>

@@ -44,10 +44,10 @@ const Footer = () => {
 
   return (
     <div className="w-full max-w-[1280px] px-3 sm:px-6 md:px-12">
-      <h2 className={`motion-preset-blur-right-lg motion-delay-500 ${merriweather.className}`}>
+      <h2 className={`motion-preset-blur-right-lg motion-delay-[600ms] ${merriweather.className}`}>
         {contactSection.contactheading}
       </h2>
-      <footer className="motion-preset-blur-up-lg relative z-10 flex w-full flex-col gap-6 self-start text-balance rounded-t-2xl border-t-2 border-cflatyellow bg-gradient-to-t from-slate-950 to-slate-800 p-6 pt-[3.75rem] motion-delay-500">
+      <footer className="motion-preset-blur-up-lg relative z-10 flex w-full flex-col gap-6 self-start text-balance rounded-t-2xl border-t-2 border-cflatyellow bg-gradient-to-t from-slate-950 to-slate-800 p-6 pt-[3.75rem] motion-delay-[600ms]">
         <div className="grid max-w-[1280px] grid-cols-1 justify-end gap-9 px-3 py-6 sm:grid-cols-2 sm:px-6 md:px-12">
           <div>
             <ContactForm />
