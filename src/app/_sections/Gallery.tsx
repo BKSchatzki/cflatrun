@@ -18,7 +18,6 @@ interface ImageData {
   galleryimage: string;
   imagecaption: string;
 }
-type Image = ImageData;
 
 export interface GallerySection {
   galleryheading: string;
@@ -36,7 +35,7 @@ const Gallery = () => {
       className="motion-preset-blur-right-lg relative flex w-full scroll-m-16 flex-col items-center motion-delay-500"
     >
       <h2 className={merriweather.className}>{gallerySection.galleryheading}</h2>
-      <div className="relative border-t-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-transparent py-3">
+      <div className="relative border-t-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-transparent pt-3">
         <div className="motion-preset-blur-left-md motion-delay-[600ms] before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-6 before:bg-gradient-to-l before:from-transparent before:to-slate-950 before:to-50% after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-6 after:bg-gradient-to-r after:from-transparent after:to-slate-950 after:to-50%">
           <PhotoCarousel gallerySection={gallerySection} />
         </div>
