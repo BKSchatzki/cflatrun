@@ -6,6 +6,6 @@ classof: "2013"
 major: Music
 position: Music Director
 portrait: /uploads/dscf8370.jpg
-iscurrent: true
+iscurrent: false
 image: ""
 ---
