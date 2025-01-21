@@ -1,10 +1,11 @@
 ---
+voicepart: Vocal Percussion
+bio: ""
 name: Erik Rodriguez
 classof: "2027"
-voicepart: Vocal Percussion
+major: Psychology
 position: Networking Chair
-bio: ""
-image: ""
 portrait: /uploads/erodriguez.webp
 iscurrent: true
+image: ""
 ---

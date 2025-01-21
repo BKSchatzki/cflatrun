@@ -1,5 +1,6 @@
 import Concerts from './_sections/Concerts';
 import Footer from './_sections/Footer';
+import Gallery from './_sections/Gallery';
 import Hero from './_sections/Hero';
 import Members from './_sections/Members';
 
@@ -10,6 +11,7 @@ export default function Home() {
         <Hero />
         <Members />
         <Concerts />
+        <Gallery />
       </main>
       <Footer />
     </div>

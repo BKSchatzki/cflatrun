@@ -1,10 +1,11 @@
 ---
+voicepart: Alto
+bio: ""
 name: Jenn Rihacek
 classof: "2026"
-voicepart: Alto
+major: Psychology & Journalism
 position: President
-bio: ""
-image: ""
 portrait: /uploads/jrihacek.webp
 iscurrent: true
+image: ""
 ---

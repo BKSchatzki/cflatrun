@@ -1,10 +1,11 @@
 ---
+voicepart: Alto
+bio: ""
 name: Pallavi Dalmia
 classof: 2027
-voicepart: Alto
+major: Nursing
 position: ""
-bio: ""
-image: ""
 portrait: /uploads/pdalmia.webp
 iscurrent: true
+image: ""
 ---

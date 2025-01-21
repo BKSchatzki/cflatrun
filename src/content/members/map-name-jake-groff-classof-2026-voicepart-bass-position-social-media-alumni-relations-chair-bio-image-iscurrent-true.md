@@ -1,10 +1,11 @@
 ---
+voicepart: Bass
+bio: ""
 name: Jake Groff
 classof: "2026"
-voicepart: Bass
+major: Nursing
 position: ""
-bio: ""
-image: ""
 portrait: /uploads/jgroff.webp
 iscurrent: true
+image: ""
 ---
