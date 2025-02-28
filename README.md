@@ -1,5 +1,7 @@
 # C Flat Run
 
+A Next.js x Tailwind CSS landing page, content using DecapCMS to deploy on Netlify. The hero blurb: Welcome to the website for "Pitt's Sex-C-est A Cappella Group"! Established in 2009, C Flat Run is an all-gender a cappella group at the University of Pittsburgh. We love to sing, have fun...and most importantly...look good doing it.
+
 <!-- ![PartyRoomBloom Outline Builder](https://cmt76lyntq.ufs.sh/f/uvtHsYCzVSYq7sFXn66Qhdeki6VKaqoOupjLYXb4INxMycAl)
 
 ## Description
