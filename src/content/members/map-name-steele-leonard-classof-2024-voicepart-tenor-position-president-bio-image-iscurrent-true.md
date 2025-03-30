@@ -1,10 +1,11 @@
 ---
+voicepart: Bass
+bio: ""
 name: Zander Coleman
 classof: "2025"
-voicepart: Bass
+major: Bioengineering
 position: Music Director
-bio: ""
-image: ""
 portrait: /uploads/zcoleman.webp
 iscurrent: true
+image: ""
 ---
