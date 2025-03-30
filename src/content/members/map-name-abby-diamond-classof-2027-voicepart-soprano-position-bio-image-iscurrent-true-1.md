@@ -1,10 +1,11 @@
 ---
+voicepart: Soprano
+bio: ""
 name: Abby Diamond
 classof: "2027"
-voicepart: Soprano
+major: Psychology & Data Science
 position: ""
-bio: ""
-image: ""
 portrait: /uploads/adiamond.webp
 iscurrent: true
+image: ""
 ---
