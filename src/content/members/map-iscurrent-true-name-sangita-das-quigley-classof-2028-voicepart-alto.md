@@ -1,6 +1,7 @@
 ---
 name: Sangita Das-Quigley
-classof: 2028
+classof: 2027
+major: Neuroscience
 voicepart: Alto
 portrait: /uploads/sdasquigley.webp
 iscurrent: true
