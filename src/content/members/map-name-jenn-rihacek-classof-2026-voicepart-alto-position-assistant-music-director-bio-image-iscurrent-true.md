@@ -6,6 +6,6 @@ classof: "2026"
 major: Psychology & Nonfiction Writing
 position: President
 portrait: /uploads/jrihacek.webp
-iscurrent: true
+iscurrent: false
 image: ""
 ---
