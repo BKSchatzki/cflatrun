@@ -6,6 +6,6 @@ classof: "2025"
 major: Bioengineering
 position: Music Director
 portrait: /uploads/zcoleman.webp
-iscurrent: true
+iscurrent: false
 image: ""
 ---
