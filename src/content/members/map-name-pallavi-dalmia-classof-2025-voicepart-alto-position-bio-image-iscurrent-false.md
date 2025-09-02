@@ -4,7 +4,7 @@ bio: ""
 name: Pallavi Dalmia
 classof: 2027
 major: Nursing
-position: ""
+position: "Secretary "
 portrait: /uploads/pdalmia.webp
 iscurrent: true
 image: ""
