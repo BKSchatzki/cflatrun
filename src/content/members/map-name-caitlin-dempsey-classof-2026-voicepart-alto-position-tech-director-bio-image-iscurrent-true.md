@@ -4,7 +4,7 @@ bio: ""
 name: Caitlin Dempsey
 classof: "2026"
 major: Psychology
-position: Tech & Social Media Chair
+position: ""
 portrait: /uploads/cdempsey.webp
 iscurrent: true
 image: ""
