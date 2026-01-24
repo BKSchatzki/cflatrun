@@ -6,6 +6,6 @@ sitedescription: Welcome to the website for "Pitt's Sex-C-est A Cappella Group"!
   University of Pittsburgh. We love to sing, have fun...and most
   importantly...look good doing it. 16 years strong!
 sitelogo: /uploads/c-flat-logo-basic-op-1-01.webp
-heroimage: /uploads/fall-photoshoot-2024.png
+heroimage: /uploads/dsc_0898_under2mb.jpg
 bgimage: ""
 ---
