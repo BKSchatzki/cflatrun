@@ -1,36 +1,26 @@
 ---
-concertname: C Flat Grunge / Gardens & Gnomes
-year: 2024
-semester: Spring
+concertname: After Dark
+year: 2025
+semester: Fall
 songs:
-  - title: 7 Rings
-    opb: Ariana Grande
-    arranger: Steele Leonard
-    soloist: Ashley Lewis
-    vocalpercussion: Erik Rodriguez
-  - title: No Air
+  - title: "No Air "
     opb: Jordin Sparks & Chris Brown
-    arranger: Zander Coleman
-    soloist: Jenn Rihacek & Emi Prudhoe
+    arranger: N/A
+    soloist: Nyla Autry-Woodard & Emi Prudhoe
     vocalpercussion: Erik Rodriguez
-  - title: Unwritten
-    opb: Natasha Bedingfield
-    arranger: Patrick Diamond
-    soloist: Abby Diamond
+  - title: "I Don't Wanna Live Forever "
+    opb: "Zayn Malik & Taylor Swift "
+    arranger: "Jake Groff "
+    soloist: "Maeve McNichol & Rachel Hartman "
     vocalpercussion: Erik Rodriguez
-  - title: Silver Springs
-    opb: Fleetwood Mac
-    arranger: Abby Diamond
-    soloist: Jenn Rihacek & Emi Prudhoe
+  - title: Lovely
+    opb: "Billie Eilish & Khalid "
+    arranger: N/A
+    soloist: Mackenzie O'Donnell & Patrick Diamond
     vocalpercussion: Erik Rodriguez
-  - title: Somebody That I Used to Know
-    opb: Gotye & Kimbra
-    arranger: Patrick Diamond
-    soloist: Jake Groff & Jess Rinaldi
-    vocalpercussion: Erik Rodriguez
-  - title: No Time to Die at Skyfall
-    opb: Billie Eilish & Adele
-    arranger: Zander Coleman
-    soloist: Jenn Rihacek & Pallavi Dalmia
+  - title: "Somebody That I Used to Know "
+    opb: "Goye ft. Kimbra "
+    arranger: "Patrick Diamond "
+    soloist: Jake Groff & Anna Courson
     vocalpercussion: Erik Rodriguez
 ---
