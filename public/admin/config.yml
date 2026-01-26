@@ -20,7 +20,7 @@ collections:
               name: 'sitelogo',
               widget: 'image',
               default: 'uploads/c-flat-logo-basic-op-1-01.webp',
-              media_library: { config: { max_file_size: 1024000 } },
+              media_library: { config: { max_file_size: 2048000 } },
               required: false,
             }
           - {
@@ -186,7 +186,7 @@ collections:
           label: 'Portrait',
           name: 'portrait',
           widget: 'image',
-          media_library: { config: { max_file_size: 1024000 } },
+          media_library: { config: { max_file_size: 2048000 } },
           required: false,
         }
       - { label: 'Is Current', name: 'iscurrent', widget: 'boolean', default: true }
