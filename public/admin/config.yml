@@ -20,21 +20,21 @@ collections:
               name: 'sitelogo',
               widget: 'image',
               default: 'uploads/c-flat-logo-basic-op-1-01.webp',
-              media_library: { config: { max_file_size: 2048000 } },
+              media_library: { config: { max_file_size: 4096000 } },
               required: false,
             }
           - {
               label: 'Hero Image',
               name: 'heroimage',
               widget: 'image',
-              media_library: { config: { max_file_size: 2048000 } },
+              media_library: { config: { max_file_size: 4096000 } },
               required: false,
             }
           - {
               label: 'Background Image',
               name: 'bgimage',
               widget: 'image',
-              media_library: { config: { max_file_size: 2048000 } },
+              media_library: { config: { max_file_size: 4096000 } },
               required: false,
             }
       - label: 'Officers Section'
@@ -58,7 +58,7 @@ collections:
               label: 'Background Image',
               name: 'bgimage',
               widget: 'image',
-              media_library: { config: { max_file_size: 2048000 } },
+              media_library: { config: { max_file_size: 4096000 } },
               required: false,
             }
       - label: 'Members Section'
@@ -82,7 +82,7 @@ collections:
               label: 'Background Image',
               name: 'bgimage',
               widget: 'image',
-              media_library: { config: { max_file_size: 2048000 } },
+              media_library: { config: { max_file_size: 4096000 } },
               required: false,
             }
       - label: 'Concerts Section'
@@ -106,7 +106,7 @@ collections:
               label: 'Background Image',
               name: 'bgimage',
               widget: 'image',
-              media_library: { config: { max_file_size: 2048000 } },
+              media_library: { config: { max_file_size: 4096000 } },
               required: false,
             }
       - label: 'Contact Section'
@@ -130,7 +130,7 @@ collections:
               label: 'Background Image',
               name: 'bgimage',
               widget: 'image',
-              media_library: { config: { max_file_size: 2048000 } },
+              media_library: { config: { max_file_size: 4096000 } },
               required: false,
             }
       - label: 'Gallery Section'
@@ -158,7 +158,7 @@ collections:
                   label: 'Gallery Image',
                   name: 'galleryimage',
                   widget: 'image',
-                  media_library: { config: { max_file_size: 2048000 } },
+                  media_library: { config: { max_file_size: 4096000 } },
                 }
               - { label: 'Image Caption', name: 'imagecaption', widget: 'string', required: false }
   - label: 'Members'
@@ -186,7 +186,7 @@ collections:
           label: 'Portrait',
           name: 'portrait',
           widget: 'image',
-          media_library: { config: { max_file_size: 2048000 } },
+          media_library: { config: { max_file_size: 4096000 } },
           required: false,
         }
       - { label: 'Is Current', name: 'iscurrent', widget: 'boolean', default: true }
