@@ -5,7 +5,7 @@ name: Erik Rodriguez
 classof: "2027"
 major: Psychology
 position: Tech
-portrait: https://drive.google.com/drive/u/1/folders/11i51XsAIfMJPGVNvy41QhXlLDHYAUrIH
+portrait: /uploads/dsc_0618_under2mb.jpg
 iscurrent: true
 image: ""
 ---
