@@ -4,6 +4,6 @@ classof: 2028
 major: "Music and Education "
 voicepart: Tenor
 position: ""
-portrait: /uploads/dsc_0645_compressed.jpg
+portrait: /uploads/dsc_0648_compressed.jpg
 iscurrent: true
 ---
