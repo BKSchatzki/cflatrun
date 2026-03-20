@@ -6,3 +6,13 @@ declare module '*.md' {
   };
   export default content;
 }
+
+declare global {
+  interface Window {
+    netlifyIdentity?: {
+      on(event: string, callback: (...args: unknown[]) => void): void;
+    };
+  }
+}
+
+export {};

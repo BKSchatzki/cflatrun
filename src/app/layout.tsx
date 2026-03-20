@@ -3,6 +3,8 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 
+import NetlifyIdentityRoot from '@/components/NetlifyIdentityRoot';
+
 const jakarta = Plus_Jakarta_Sans({
   style: ['normal', 'italic'],
   subsets: ['latin'],
@@ -29,7 +31,10 @@ export default function RootLayout({
       lang="en"
       className="scroll-smooth"
     >
-      <body className={`${jakarta.className} antialiased`}>{children}</body>
+      <body className={`${jakarta.className} antialiased`}>
+        {children}
+        <NetlifyIdentityRoot />
+      </body>
     </html>
   );
 }
