@@ -5,7 +5,7 @@ semester: Spring
 songs:
   - title: 2026 ICCA Set
     arranger: Patrick Diamond, Sangita Das-Quigley, Neena Tavik
-    soloist: Rachel Hartman, Mackenzie O'Donnell, Neena Tavik, Anna Courson
+    soloist: C Flat Run
     vocalpercussion: "Erik Rodriguez "
     opb: "Britney Spears, Lada Gaga, Shaya Zamora, Florence and The Machine "
   - title: "Bleed "
