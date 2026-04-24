@@ -6,6 +6,6 @@ classof: "2026"
 major: Ecology & Evolution
 position: ""
 portrait: /uploads/eprudhoe.webp
-iscurrent: true
+iscurrent: false
 image: ""
 ---
