@@ -6,6 +6,6 @@ classof: "2026"
 major: Nursing
 position: "President "
 portrait: /uploads/jgroff.webp
-iscurrent: true
+iscurrent: false
 image: ""
 ---
