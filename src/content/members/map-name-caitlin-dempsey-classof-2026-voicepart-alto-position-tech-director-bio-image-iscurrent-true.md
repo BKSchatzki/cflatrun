@@ -6,6 +6,6 @@ classof: "2026"
 major: Psychology
 position: ""
 portrait: /uploads/cdempsey.webp
-iscurrent: true
+iscurrent: false
 image: ""
 ---
