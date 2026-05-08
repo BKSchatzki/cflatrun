@@ -32,8 +32,8 @@ const Hero = () => {
   const heroData: HeroData = getDataFromFile<HeroData>(heroPath);
 
   return (
-    <section className="motion-preset-blur-down-lg relative z-10 flex w-full justify-between gap-6 text-balance rounded-2xl border-b-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-slate-800 p-3 pt-[3.75rem] motion-delay-100 max-lg:flex-col sm:px-6 sm:pt-6 sm:pb-8 md:pb-11 lg:pb-[3.25rem]">
-      <div className="flex max-w-full flex-col gap-6 max-sm:items-center max-sm:text-center sm:pl-2 md:pl-5 lg:pl-7">
+    <section className="motion-preset-blur-down-lg relative z-10 flex w-full justify-between gap-6 rounded-2xl border-b-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-slate-800 p-3 pt-[3.75rem] motion-delay-100 max-lg:flex-col sm:p-6">
+      <div className="flex flex-col gap-6 max-sm:items-center max-sm:text-center">
         <div className="flex items-center gap-3 max-sm:flex-col">
           <img
             src={heroData.sitelogo || 'logo-default.webp'}
