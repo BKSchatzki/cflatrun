@@ -37,6 +37,28 @@ collections:
               media_library: { config: { max_file_size: 8192000 } },
               required: false,
             }
+          - {
+              label: 'Donation Description',
+              name: 'donationdescription',
+              widget: 'text',
+              required: false,
+              hint: 'Short blurb shown next to the donation link in the hero.',
+            }
+          - {
+              label: 'Donation Link Text',
+              name: 'donationlinktext',
+              widget: 'string',
+              required: false,
+              default: 'Donate Here',
+              hint: 'Text shown for the donation call-to-action link.',
+            }
+          - {
+              label: 'Donation Link URL',
+              name: 'donationlinkurl',
+              widget: 'string',
+              required: false,
+              hint: 'Full URL to the donation page. Leave blank to hide the donation CTA.',
+            }
       - label: 'Officers Section'
         name: 'officerssection'
         file: 'src/content/sitecontent/officerssection.md'

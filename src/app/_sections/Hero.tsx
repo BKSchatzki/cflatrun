@@ -1,5 +1,6 @@
 import {
   Facebook,
+  Heart,
   Instagram,
   Youtube,
 } from 'lucide-react';
@@ -22,6 +23,9 @@ interface HeroData {
   sitelogo?: string;
   heroimage?: string;
   bgimage?: string;
+  donationdescription?: string;
+  donationlinktext?: string;
+  donationlinkurl?: string;
 }
 
 const Hero = () => {
@@ -49,6 +53,11 @@ const Hero = () => {
           {heroData.sitesubheading}
         </h3>
         <p className="max-w-md">{heroData.sitedescription}</p>
+        <DonationCTA
+          description={heroData.donationdescription}
+          linkText={heroData.donationlinktext}
+          linkUrl={heroData.donationlinkurl}
+        />
       </div>
       <img
         src={heroData.heroimage || 'uploads/fuel-and-fuddle.png'}
@@ -99,6 +108,36 @@ const SocialLinks = () => {
         </a>
       </li>
     </ul>
+  );
+};
+
+interface DonationCTAProps {
+  description?: string;
+  linkText?: string;
+  linkUrl?: string;
+}
+
+const DonationCTA = ({ description, linkText, linkUrl }: DonationCTAProps) => {
+  if (!linkUrl) return null;
+
+  return (
+    <div className="flex max-w-md flex-col gap-2 rounded-xl border-2 border-cflatyellow/70 bg-cflatblue/40 p-4 ring-2 ring-cflatdarkblue/60 max-sm:items-center max-sm:text-center">
+      {description && (
+        <p className="text-sm leading-snug text-slate-100">{description}</p>
+      )}
+      <a
+        href={linkUrl}
+        target="_blank"
+        rel="noreferrer"
+        className="group inline-flex w-fit items-center gap-2 rounded-md bg-cflatyellow px-3 py-1.5 font-semibold text-cflatdarkblue transition-all duration-300 hover:scale-105 hover:shadow-md hover:shadow-cflatyellow/50"
+      >
+        <Heart
+          className="size-4 transition-transform duration-300 group-hover:scale-110"
+          fill="currentColor"
+        />
+        <span>{linkText || 'Donate Here'}</span>
+      </a>
+    </div>
   );
 };
 
