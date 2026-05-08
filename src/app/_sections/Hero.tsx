@@ -121,10 +121,8 @@ const DonationCTA = ({ description, linkText, linkUrl }: DonationCTAProps) => {
   if (!linkUrl) return null;
 
   return (
-    <div className="flex max-w-md flex-col gap-2 rounded-xl border-2 border-cflatyellow/70 bg-cflatblue/40 p-4 ring-2 ring-cflatdarkblue/60 max-sm:items-center max-sm:text-center">
-      {description && (
-        <p className="text-sm leading-snug text-slate-100">{description}</p>
-      )}
+    <div className="flex max-w-md flex-col gap-3 rounded-md rounded-t-none border-t-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-indigo-950 p-3 max-sm:items-center max-sm:text-center">
+      {description && <p className="max-w-md">{description}</p>}
       <a
         href={linkUrl}
         target="_blank"
