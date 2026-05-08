@@ -32,7 +32,7 @@ const Hero = () => {
   const heroData: HeroData = getDataFromFile<HeroData>(heroPath);
 
   return (
-    <section className="motion-preset-blur-down-lg relative z-10 flex w-full justify-between gap-6 rounded-2xl border-b-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-slate-800 p-3 pt-[3.75rem] motion-delay-100 max-lg:flex-col sm:p-6">
+    <section className="motion-preset-blur-down-lg relative z-10 flex w-full justify-between gap-6 text-pretty rounded-2xl border-b-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-slate-800 p-3 pt-[3.75rem] motion-delay-100 max-lg:flex-col sm:p-6">
       <div className="flex flex-col gap-6 max-sm:items-center max-sm:text-center">
         <div className="flex items-center gap-3 max-sm:flex-col">
           <img
@@ -121,13 +121,15 @@ const DonationCTA = ({ description, linkText, linkUrl }: DonationCTAProps) => {
   if (!linkUrl) return null;
 
   return (
-    <div className="flex max-w-md flex-col gap-3 border-t-2 border-cflatyellow pt-3 max-sm:items-center max-sm:text-center">
-      {description && <p className="max-w-md">{description}</p>}
+    <div className="flex max-w-md flex-row flex-wrap items-start gap-3 border-t-2 border-cflatyellow pt-3">
+      {description && (
+        <p className="min-w-0 flex-1">{description}</p>
+      )}
       <a
         href={linkUrl}
         target="_blank"
         rel="noreferrer"
-        className="group inline-flex w-fit items-center gap-2 rounded-md bg-cflatyellow px-3 py-1.5 font-semibold text-cflatdarkblue transition-all duration-300 hover:scale-105 hover:shadow-md hover:shadow-cflatyellow/50"
+        className="group inline-flex shrink-0 grow-0 items-center gap-2 self-start rounded-md bg-cflatyellow px-3 py-1.5 font-semibold text-cflatdarkblue transition-all duration-300 hover:scale-105 hover:shadow-md hover:shadow-cflatyellow/50"
       >
         <Heart
           className="size-4 transition-transform duration-300 group-hover:scale-110"
