@@ -121,15 +121,15 @@ const DonationCTA = ({ description, linkText, linkUrl }: DonationCTAProps) => {
   if (!linkUrl) return null;
 
   return (
-    <div className="flex max-w-md flex-row flex-wrap items-start gap-3 border-t-2 border-cflatyellow pt-3">
+    <div className="flex max-w-md flex-col items-center gap-3 border-t-2 border-cflatyellow pt-3 text-center sm:flex-row sm:flex-wrap sm:items-start sm:text-start">
       {description && (
-        <p className="min-w-0 flex-1">{description}</p>
+        <p className="w-full min-w-0 sm:flex-1">{description}</p>
       )}
       <a
         href={linkUrl}
         target="_blank"
         rel="noreferrer"
-        className="group inline-flex shrink-0 grow-0 items-center gap-2 self-start rounded-md bg-cflatyellow px-3 py-1.5 font-semibold text-cflatdarkblue transition-all duration-300 hover:scale-105 hover:shadow-md hover:shadow-cflatyellow/50"
+        className="group inline-flex shrink-0 grow-0 items-center gap-2 self-center rounded-md bg-cflatyellow px-3 py-1.5 font-semibold text-cflatdarkblue transition-all duration-300 hover:scale-105 hover:shadow-md hover:shadow-cflatyellow/50 sm:self-start"
       >
         <Heart
           className="size-4 transition-transform duration-300 group-hover:scale-110"
