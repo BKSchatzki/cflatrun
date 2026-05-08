@@ -33,7 +33,7 @@ const Hero = () => {
 
   return (
     <section className="motion-preset-blur-down-lg relative z-10 flex w-full justify-between gap-6 text-balance rounded-2xl border-b-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-slate-800 p-3 pt-[3.75rem] motion-delay-100 max-lg:flex-col sm:p-6">
-      <div className="flex flex-col gap-6 max-sm:items-center max-sm:text-center">
+      <div className="flex max-w-full flex-col gap-6 max-sm:items-center max-sm:text-center sm:pl-4 md:pl-10 lg:pl-14">
         <div className="flex items-center gap-3 max-sm:flex-col">
           <img
             src={heroData.sitelogo || 'logo-default.webp'}
@@ -121,7 +121,7 @@ const DonationCTA = ({ description, linkText, linkUrl }: DonationCTAProps) => {
   if (!linkUrl) return null;
 
   return (
-    <div className="flex max-w-md flex-col gap-3 rounded-md rounded-t-none border-t-2 border-cflatyellow bg-gradient-to-b from-slate-950 to-indigo-950 p-3 max-sm:items-center max-sm:text-center">
+    <div className="flex max-w-md flex-col gap-3 border-t-2 border-cflatyellow pt-3 max-sm:items-center max-sm:text-center">
       {description && <p className="max-w-md">{description}</p>}
       <a
         href={linkUrl}
