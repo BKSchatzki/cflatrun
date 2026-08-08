@@ -4,6 +4,6 @@ classof: 2027
 major: Neuroscience
 voicepart: Alto
 position: "President "
-portrait: /uploads/sdasquigley.webp
+portrait: /uploads/gemini_generated_image_jodfhjjodfhjjodf.png
 iscurrent: true
 ---
