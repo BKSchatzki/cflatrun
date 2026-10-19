@@ -3,6 +3,6 @@ name: Anna Courson
 classof: 2029
 major: Psychology
 voicepart: Alto
-portrait: /uploads/p1266069.jpeg
+portrait: /uploads/screenshot-2026-10-19-at-7.43.50 pm.png
 iscurrent: true
 ---
